@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using RPG.Components;
+using RPG.Manager;
 
 namespace RPG
 {
@@ -13,6 +14,7 @@ namespace RPG
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private BaseObject _player;
+        private ManagerInput _managerInput;
 
         public Game1()
         {
@@ -22,6 +24,7 @@ namespace RPG
             this.graphics.PreferredBackBufferHeight = 800;
             this.graphics.PreferredBackBufferWidth = 1000;
             _player = new BaseObject();
+            _managerInput = new ManagerInput();
         }
 
         /// <summary>
@@ -46,6 +49,7 @@ namespace RPG
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             _player.AddComponent(new Sprite(Content.Load<Texture2D>("Player/ZeldaDown"), 90, 30, new Vector2(50, 50)));
+            _player.AddComponent(new PlayerInput());
 
             // TODO: use this.Content to load your game content here
         }
@@ -68,6 +72,9 @@ namespace RPG
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+            _managerInput.Update(gameTime.ElapsedGameTime.Milliseconds);
+            _player.Update(gameTime.ElapsedGameTime.Milliseconds);
 
             // TODO: Add your update logic here
 

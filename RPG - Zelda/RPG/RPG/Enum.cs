@@ -1,4 +1,14 @@
 ﻿public enum ComponentType
 {
-    Sprite
+    Sprite,
+    PlayerInput
+}
+
+public enum Input
+{
+    Left, 
+    Right,
+    Up,
+    Down,
+    None
 }

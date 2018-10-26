@@ -32,6 +32,12 @@ namespace RPG.Components
             _position = position;
         }
 
+        // METHOD 
+        public void Move(float x, float y)
+        {
+            _position = new Vector2(_position.X + x, _position.Y + y);
+        }
+
         // GAME ENGINE 
         public override void Update(double gameTime)
         {

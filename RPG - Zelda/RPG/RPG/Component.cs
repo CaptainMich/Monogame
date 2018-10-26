@@ -32,6 +32,11 @@ namespace RPG
             _baseObject.RemoveComponent(this);
         }
 
+        public TComponentType GetComponent<TComponentType>(ComponentType componentType) where TComponentType : Component
+        {
+            return _baseObject.GetComponent<TComponentType>(componentType);
+        }
+
         // GAME ENGINE
         public abstract void Update(double gameTime);
         public abstract void Draw(SpriteBatch spriteBatch);
