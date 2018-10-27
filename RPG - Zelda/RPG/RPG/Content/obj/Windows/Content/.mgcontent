@@ -4,7 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Università/Laurea Magistrale/Computers Graphic Architecture/Monogame/RPG - Zelda/RPG/RPG/Content/Player/ZeldaDown.png</File>
+    <File>D:/Università/Laurea Magistrale/Computers Graphic Architecture/Monogame/RPG - Zelda/RPG/RPG/Content/Player/LinkDown.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

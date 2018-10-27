@@ -47,7 +47,6 @@ namespace RPG.Components
                 case Input.Right:
                     sprite.Move(1.5f, 0);
                     break;
-
             }
         }
 
