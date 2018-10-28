@@ -38,22 +38,21 @@ namespace RPG.Components
 
         public void ChangeState()
         {
+            _currentState = State.Standing;
+
             switch (_currentDirection)
             {
-                case Direction.Up:
-                    TextureRectangle = new Rectangle(_width * _animationIndex, _height,_width, _height);
-                    break;
-
-                case Direction.Down:
+                case Direction.Left:
                     TextureRectangle = new Rectangle(_width * _animationIndex, 0, _width, _height);
                     break;
-
-                case Direction.Right:
-                    TextureRectangle = new Rectangle(_width * _animationIndex, _height * 3, _width, _height);
+                case Direction.Down:
+                    TextureRectangle = new Rectangle(_width * _animationIndex, _height, _width, _height);
                     break;
-
-                case Direction.Left:
+                case Direction.Right:
                     TextureRectangle = new Rectangle(_width * _animationIndex, _height * 2, _width, _height);
+                    break;
+                case Direction.Up:
+                    TextureRectangle = new Rectangle(_width * _animationIndex, _height * 3,_width, _height);
                     break;
             }
 
@@ -66,19 +65,24 @@ namespace RPG.Components
                     _animationIndex = 2;
                     break;
                 case 2:
+                    _animationIndex = 3;
+                    break;
+                case 3:
+                    _animationIndex = 4;
+                    break;
+                case 4:
                     _animationIndex = 0;
                     break;
             }
 
             //_animationIndex = _animationIndex == 0 ? 1 : 0;
-            //_currentState = State.Standing;
         }
 
         public void ResetCounter(State state, Direction direction)
         {
-            if(state != _currentState)
+            if(_currentDirection != direction)
             {
-                _counter = 1000;
+                _counter = 300;
                 _animationIndex = 0;
             }
 
@@ -98,7 +102,7 @@ namespace RPG.Components
             {
                 case State.Walking:
                     _counter += gameTime;
-                    if(_counter > 200)                              // modify to change player animation switching velocity
+                    if(_counter > 150)                              // modify to change player animation switching velocity
                     {
                         ChangeState();
                         _counter = 0;

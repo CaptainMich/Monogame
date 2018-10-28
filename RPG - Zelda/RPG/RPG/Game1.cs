@@ -48,9 +48,9 @@ namespace RPG
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            _player.AddComponent(new Sprite(Content.Load<Texture2D>("Player/LinkDown"), 30, 30, new Vector2(50, 50)));
+            _player.AddComponent(new Sprite(Content.Load<Texture2D>("Player/LinkAllWalk"), 50, 50, new Vector2(50, 50)));
             _player.AddComponent(new PlayerInput());
-            _player.AddComponent(new Animation(30,30));
+            _player.AddComponent(new Animation(33,33));
 
             // TODO: use this.Content to load your game content here
         }

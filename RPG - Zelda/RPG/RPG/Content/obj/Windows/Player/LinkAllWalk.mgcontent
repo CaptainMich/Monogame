@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/Università/Laurea Magistrale/Computers Graphic Architecture/Monogame/RPG - Zelda/RPG/RPG/Content/Player/LinkDown.png</SourceFile>
-  <SourceTime>2018-10-25T19:39:32.8510876+02:00</SourceTime>
-  <DestFile>D:/Università/Laurea Magistrale/Computers Graphic Architecture/Monogame/RPG - Zelda/RPG/RPG/Content/bin/Windows/Player/LinkDown.xnb</DestFile>
-  <DestTime>2018-10-27T19:37:47.7978915+02:00</DestTime>
+  <SourceFile>D:/Università/Laurea Magistrale/Computers Graphic Architecture/Monogame/RPG - Zelda/RPG/RPG/Content/Player/LinkAllWalk.png</SourceFile>
+  <SourceTime>2018-10-28T13:06:24.1782665+01:00</SourceTime>
+  <DestFile>D:/Università/Laurea Magistrale/Computers Graphic Architecture/Monogame/RPG - Zelda/RPG/RPG/Content/bin/Windows/Player/LinkAllWalk.xnb</DestFile>
+  <DestTime>2018-10-28T13:06:40.4689636+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
