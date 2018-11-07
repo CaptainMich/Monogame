@@ -15,6 +15,7 @@ namespace RPG
         SpriteBatch spriteBatch;
         private BaseObject _player;
         private ManagerInput _managerInput;
+        private ManagerMap _managerMap;
 
         public Game1()
         {
@@ -25,6 +26,7 @@ namespace RPG
             this.graphics.PreferredBackBufferWidth = 1000;
             _player = new BaseObject();
             _managerInput = new ManagerInput();
+            _managerMap = new ManagerMap("test");
         }
 
         /// <summary>
@@ -48,9 +50,10 @@ namespace RPG
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            _player.AddComponent(new Sprite(Content.Load<Texture2D>("Player/LinkAllWalk"), 50, 50, new Vector2(50, 50)));
+            _player.AddComponent(new Sprite(Content.Load<Texture2D>("Player/LinkAllWalk"), 80, 80, new Vector2(50, 50)));
             _player.AddComponent(new PlayerInput());
             _player.AddComponent(new Animation(33,33));
+            _managerMap.LoadContent(Content);
 
             // TODO: use this.Content to load your game content here
         }
@@ -76,6 +79,7 @@ namespace RPG
 
             _managerInput.Update(gameTime.ElapsedGameTime.Milliseconds);
             _player.Update(gameTime.ElapsedGameTime.Milliseconds);
+            _managerMap.Update(gameTime.ElapsedGameTime.Milliseconds);
 
             // TODO: Add your update logic here
 
@@ -93,6 +97,7 @@ namespace RPG
             // TODO: Add your drawing code here
 
             spriteBatch.Begin();
+            _managerMap.Draw(spriteBatch);
             _player.Draw(spriteBatch);
             spriteBatch.End();            
 

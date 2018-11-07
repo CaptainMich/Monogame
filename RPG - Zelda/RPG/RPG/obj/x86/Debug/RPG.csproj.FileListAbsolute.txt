@@ -46,3 +46,7 @@ D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Z
 D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\obj\x86\Debug\RPG.exe
 D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\obj\x86\Debug\RPG.pdb
 D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\Player\LinkAllWalk.xnb
+D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\test_map.xml
+D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\Map\grass.xnb
+D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\Map\RoyalRoom.xnb
+D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\Map\RoyalRoom_2.xnb
