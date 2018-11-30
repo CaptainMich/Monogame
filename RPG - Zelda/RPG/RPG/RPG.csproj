@@ -44,6 +44,7 @@
     <Compile Include="BaseObject.cs" />
     <Compile Include="Component.cs" />
     <Compile Include="Components\Animation.cs" />
+    <Compile Include="Components\Collision.cs" />
     <Compile Include="Components\PlayerInput.cs" />
     <Compile Include="Components\Sprite.cs" />
     <Compile Include="Enum.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Manager\ManagerInput.cs" />
     <Compile Include="Manager\ManagerMap.cs" />
     <Compile Include="Map\Tile.cs" />
+    <Compile Include="Map\TileCollision.cs" />
     <Compile Include="Map\TileFrame.cs" />
     <Compile Include="MyEventArgs\NewInputEventArgs.cs" />
     <Compile Include="Program.cs" />
@@ -68,6 +70,9 @@
     <Content Include="Content\test_map.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\test_map_collision.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Icon.ico" />
   </ItemGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using RPG.Map;
@@ -13,12 +14,14 @@ namespace RPG.Manager
     {
         // FIELD 
         private List<Tile> _tiles;
+        private List<TileCollision> _tileCollisions;
         private string _mapName;
 
         // CONSTRUCTOR 
         public ManagerMap(string mapName)
         {
             _tiles = new List<Tile>();
+            _tileCollisions = new List<TileCollision>();
             _mapName = mapName;
         }
 
@@ -37,6 +40,18 @@ namespace RPG.Manager
                     tile.LoadContent(content);
                 }
             }
+
+            var tileCollision = new List<TileCollision>();
+            XMLSerialization.LoadXML(out tileCollision, string.Format("Content\\{0}_map_collision.xml", _mapName));
+            if(tileCollision != null)
+            {
+                _tileCollisions = tileCollision;
+            }
+        }
+
+        internal bool CheckCollision(Rectangle rectangle)
+        {
+            return _tileCollisions.Any(tile => tile.Intersect(rectangle));
         }
 
         // GAME ENGINE 

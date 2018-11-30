@@ -50,3 +50,4 @@ D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Z
 D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\Map\grass.xnb
 D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\Map\RoyalRoom.xnb
 D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\Map\RoyalRoom_2.xnb
+D:\Università\Laurea Magistrale\Computers Graphic Architecture\Monogame\RPG - Zelda\RPG\RPG\bin\Windows\x86\Debug\Content\test_map_collision.xml

@@ -12,11 +12,11 @@ namespace RPG.Components
     {
         // FIELD 
         private Texture2D _texture;
-        private int _width;
-        private int _height;
-        private Vector2 _position;
 
         // PROPERTY
+        public int Width { get; private set; }
+        public int Height { get; private set; }
+        public Vector2 Position { get; private set; }
         public override ComponentType ComponentType
         {
             get { return ComponentType.Sprite; }
@@ -27,15 +27,15 @@ namespace RPG.Components
         public Sprite(Texture2D texture, int width, int height, Vector2 position)
         {
             _texture = texture;
-            _width = width;
-            _height = height;
-            _position = position;
+            Width = width;
+            Height = height;
+            Position = position;
         }
 
         // METHOD 
         public void Move(float x, float y)
         {
-            _position = new Vector2(_position.X + x, _position.Y + y);
+            Position = new Vector2(Position.X + x, Position.Y + y);
             var animation = GetComponent<Animation>(ComponentType.Animation);
             if (animation == null)
                 return;
@@ -69,12 +69,12 @@ namespace RPG.Components
             var animation = GetComponent<Animation>(ComponentType.Animation);
             if (animation != null)
             {
-                spriteBatch.Draw(_texture, new Rectangle((int)_position.X, (int)_position.Y, _width, _height), 
+                spriteBatch.Draw(_texture, new Rectangle((int)Position.X, (int)Position.Y, Width, Height), 
                                 animation.TextureRectangle, Color.White);
             }
             else
             {
-                spriteBatch.Draw(_texture, new Rectangle((int)_position.X, (int)_position.Y, _width, _height), Color.White);
+                spriteBatch.Draw(_texture, new Rectangle((int)Position.X, (int)Position.Y, Width, Height), Color.White);
             }
         }
 
