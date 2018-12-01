@@ -5,7 +5,6 @@ C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\Gr
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\bin\Android\AnyCPU\Debug\MonoGame.Framework.dll
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\bin\Android\AnyCPU\Debug\MonoGame.Framework.xml
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\MonoAndroid,Version=v6.0.AssemblyAttributes.cs
-C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\GravityChallenger.csprojAssemblyReference.cache
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\libraryimports.cache.stamp
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\res.flag
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\GravityChallenger.csproj.CoreCompileInputs.cache
@@ -56,5 +55,6 @@ C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\Gr
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\android\assets\System.ServiceModel.Internals.pdb
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\android\assets\System.Xml.Linq.pdb
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\android\assets\System.Xml.pdb
+C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\GravityChallenger.csprojAssemblyReference.cache
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\bin\Android\AnyCPU\Debug\GravityChallenger.dll
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\linksrc\GravityChallenger.dll.mdb

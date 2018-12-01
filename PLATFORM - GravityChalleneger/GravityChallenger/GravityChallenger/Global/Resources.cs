@@ -12,6 +12,7 @@ using Android.Widget;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework;
 
 namespace GravityChallenger.Global
 {
@@ -20,17 +21,17 @@ namespace GravityChallenger.Global
         public static Dictionary<string, Texture2D> Images ;
         public static Dictionary<string, SoundEffect> Sounds;
 
-        public static void LoadImages(ContentManager content)
+        public static void LoadImages(ContentManager content, GraphicsDevice graphicsDevice)
         {
             Images = new Dictionary<string, Texture2D>();
 
             List<string> graphics = new List<string>()
             {
-                "background", 
-                "character",
+                "background",
+                "bird",
                 "game_buttons",
                 "gameover",
-                "get_ready",
+                "getready",
                 "ground",
                 "logo",
                 "medals",
@@ -42,6 +43,14 @@ namespace GravityChallenger.Global
                 "pipe_top",
                 "score_box",
             };
+
+            /*foreach (string img in graphics)
+            {
+                using (var stream = TitleContainer.OpenStream("Content/Graphics/" + img))
+                {
+                    Images.Add(img, Texture2D.FromStream(graphicsDevice, stream));
+                }
+            }*/
 
             foreach (string img in graphics)
                 Images.Add(img, content.Load<Texture2D>("Graphics/" + img));

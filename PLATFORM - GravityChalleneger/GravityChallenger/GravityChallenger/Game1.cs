@@ -3,8 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 
-// project import 
+// my project import 
 using GravityChallenger.Global;
+using GravityChallenger.Menu;
 
 
 namespace GravityChallenger
@@ -17,12 +18,16 @@ namespace GravityChallenger
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        MenuBase menu;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
             graphics.IsFullScreen = true;
+
+            // Width = 800; Height = 480 is the default value
             graphics.PreferredBackBufferWidth = 800;
             graphics.PreferredBackBufferHeight = 480;
             graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
@@ -35,10 +40,11 @@ namespace GravityChallenger
         /// and initialize them as well.
         /// </summary>
         protected override void Initialize()
-        {
-            // TODO: Add your initialization logic here
-
+        {           
             base.Initialize();
+
+            // Initialize the Menu
+            this.menu = new MenuMain();
         }
 
         /// <summary>
@@ -51,8 +57,8 @@ namespace GravityChallenger
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // Load Image and Sounds
-            Resources.LoadImages(this.Content);
-            Resources.LoadSounds(this.Content);
+            Resources.LoadImages(this.Content, this.GraphicsDevice);
+            //Resources.LoadSounds(this.Content, this.graphics);
         }
 
         /// <summary>
@@ -61,7 +67,7 @@ namespace GravityChallenger
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            
         }
 
         /// <summary>
@@ -74,9 +80,11 @@ namespace GravityChallenger
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 Exit();
 
-            // TODO: Add your update logic here
+            // Update the menu
+            this.menu.Update();
 
             base.Update(gameTime);
+                        
         }
 
         /// <summary>
@@ -86,9 +94,12 @@ namespace GravityChallenger
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
 
-            // TODO: Add your drawing code here
+            // Draw the menu
+            this.menu.Draw(this.spriteBatch);
 
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }
