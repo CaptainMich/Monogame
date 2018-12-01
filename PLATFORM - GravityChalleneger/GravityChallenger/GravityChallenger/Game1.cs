@@ -2,6 +2,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+
+// project import 
+using GravityChallenger.Global;
+
+
 namespace GravityChallenger
 {
     /// <summary>
@@ -45,7 +50,9 @@ namespace GravityChallenger
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            // Load Image and Sounds
+            Resources.LoadImages(this.Content);
+            Resources.LoadSounds(this.Content);
         }
 
         /// <summary>
