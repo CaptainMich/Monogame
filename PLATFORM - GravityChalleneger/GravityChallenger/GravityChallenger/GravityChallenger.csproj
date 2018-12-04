@@ -62,7 +62,10 @@
   <ItemGroup>
     <Compile Include="Activity1.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="GameEngine\GameObject.cs" />
+    <Compile Include="GameEngine\Ground.cs" />
     <Compile Include="Global\Resources.cs" />
+    <Compile Include="Global\Settings.cs" />
     <Compile Include="GraphicsEngine\Sprite.cs" />
     <Compile Include="Menu\MenuBase.cs" />
     <Compile Include="Menu\MenuMain.cs" />
@@ -98,9 +101,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Content\Graphics\background.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </AndroidAsset>
     <AndroidAsset Include="Content\Graphics\bird.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidAsset>
@@ -143,6 +143,14 @@
     <AndroidAsset Include="Content\Graphics\score_box.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Graphics\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\Graphics\background_1.jpg" />
+    <AndroidAsset Include="Content\Graphics\background_2.jpg" />
+    <AndroidAsset Include="Content\Graphics\background_3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

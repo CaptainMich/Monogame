@@ -7,7 +7,6 @@ using Microsoft.Xna.Framework.Input;
 using GravityChallenger.Global;
 using GravityChallenger.Menu;
 
-
 namespace GravityChallenger
 {
     /// <summary>
@@ -27,10 +26,18 @@ namespace GravityChallenger
 
             graphics.IsFullScreen = true;
 
-            // Width = 800; Height = 480 is the default value
-            graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 480;
+            /*// Width = 800; Height = 480 is the default value
+            graphics.PreferredBackBufferWidth = Settings.SCREEN_WIDTH;
+            graphics.PreferredBackBufferHeight = Settings.SCREEN_HEIGHT;
+            graphics.IsFullScreen = false;
             graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+            graphics.ApplyChanges();*/
+
+            graphics.IsFullScreen = true;
+            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+            graphics.ApplyChanges();
         }
 
         /// <summary>
@@ -94,7 +101,7 @@ namespace GravityChallenger
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, null);
 
             // Draw the menu
             this.menu.Draw(this.spriteBatch);

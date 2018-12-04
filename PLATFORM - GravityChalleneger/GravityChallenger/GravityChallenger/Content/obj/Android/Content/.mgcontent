@@ -4,7 +4,10 @@
   <Platform>Android</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/background.png</File>
+    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/background.jpg</File>
+    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/background_1.jpg</File>
+    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/background_2.jpg</File>
+    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/background_3.jpg</File>
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/bird.png</File>
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/game_buttons.png</File>
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/gameover.png</File>
@@ -21,6 +24,9 @@
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/score_box.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

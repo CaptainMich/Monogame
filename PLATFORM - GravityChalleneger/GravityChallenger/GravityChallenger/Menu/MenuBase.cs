@@ -22,9 +22,9 @@ namespace GravityChallenger.Menu
         private Sprite background;
 
         // CONSTRUCTOR 
-        public MenuBase()
+        protected MenuBase()
         {
-            this.background = new Sprite(0, 0, "background");
+            this.background = new Sprite("background_3", 0, 0);
         }
 
         // METHODS

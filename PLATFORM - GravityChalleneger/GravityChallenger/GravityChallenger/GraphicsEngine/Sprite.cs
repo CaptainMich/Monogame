@@ -20,44 +20,90 @@ namespace GravityChallenger.GraphicsEngine
     public class Sprite
     {
         // FIELDS
-        private Vector2 position;
-        private Texture2D texture;
-        private Rectangle sourceRectangle;
-        private Color color;
+        protected Texture2D texture;
+        protected Rectangle destinationRectangle;
+        protected Color color;
+        protected float rotation;
+        protected Vector2 origin;
+        protected SpriteEffects imgOrientation;
 
-        // SETTER
+        // GETTERS & SETTERS
+        public Point GetTextureSize()
+        {
+            return new Point(this.destinationRectangle.Width, this.destinationRectangle.Height);
+        }
+
         public void SetColor(Color color)
         {
             this.color = color;
         }
 
-        // CONSTRUCTOR
-        public Sprite(float x, float y, string imgKey)
+        public void SetOrientation(SpriteEffects orientation)
         {
-            this.position = new Vector2(x, y);
-            this.texture = Resources.Images[imgKey];
-            this.sourceRectangle = Rectangle.Empty;
-            this.color = Color.White;
+            this.imgOrientation = orientation;
         }
 
-        public Sprite(float x, float y, string imgKey, Rectangle sourceRect)
+        public void SetRotation(float rotation)
         {
-            this.position = new Vector2(x, y);
+            this.rotation = rotation;
+        }
+
+        public void SetOrigin(int x, int y)
+        {
+            this.origin.X = x;
+            this.origin.Y = y;
+        }
+
+        // CONSTRUCTOR
+        public Sprite(string imgKey)
+        {
+            this.Initialize(imgKey, 0, 0, SpriteEffects.None);
+        }
+
+        public Sprite(string imgKey, int x, int y)
+        {
+            this.Initialize(imgKey, x, y, SpriteEffects.None);
+        }
+
+        public Sprite(string imgKey, int x, int y, SpriteEffects orientation)
+        {
+            this.Initialize(imgKey, x, y, orientation);
+        }
+
+        private void Initialize(string imgKey, int x, int y, SpriteEffects orientation)
+        {
             this.texture = Resources.Images[imgKey];
-            this.sourceRectangle = sourceRect;
             this.color = Color.White;
+            this.rotation = 0f;
+            this.imgOrientation = orientation;
+            this.origin = new Vector2(0, 0);
+            this.destinationRectangle = new Rectangle((x + (int)this.origin.X) * Settings.PIXEL_RATIO,
+                (y + (int)this.origin.Y) * Settings.PIXEL_RATIO,
+                this.texture.Width * Settings.PIXEL_RATIO,
+                this.texture.Height * Settings.PIXEL_RATIO);
         }
 
         // METHODS
 
-
-        // UPDATE and DRAW
-        public void Draw(SpriteBatch spriteBatch)
+        // UPDATE & DRAW
+        public virtual void Update(int x, int y)
         {
-            if (sourceRectangle.Equals(Rectangle.Empty))
-                spriteBatch.Draw(this.texture, this.position, this.color);
-            else
-                spriteBatch.Draw(this.texture, this.position, this.sourceRectangle, this.color);
+            this.destinationRectangle.X = (x + (int)this.origin.X) * Settings.PIXEL_RATIO;
+            this.destinationRectangle.Y = (y + (int)this.origin.Y) * Settings.PIXEL_RATIO;
+            this.destinationRectangle.Width = this.texture.Width * Settings.PIXEL_RATIO;
+            this.destinationRectangle.Height = this.texture.Height * Settings.PIXEL_RATIO;
+        }
+
+        public virtual void Draw(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Draw(this.texture, 
+                this.destinationRectangle, 
+                null, 
+                this.color, 
+                this.rotation, 
+                this.origin, 
+                this.imgOrientation, 
+                0f);
         }
     }
 }

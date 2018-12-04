@@ -28,6 +28,9 @@ namespace GravityChallenger.Global
             List<string> graphics = new List<string>()
             {
                 "background",
+                "background_1",
+                "background_2",
+                "background_3",
                 "bird",
                 "game_buttons",
                 "gameover",
