@@ -6,6 +6,8 @@ using Microsoft.Xna.Framework.Input;
 // my project import 
 using GravityChallenger.Global;
 using GravityChallenger.Menu;
+using Microsoft.Xna.Framework.Input.Touch;
+using System;
 
 namespace GravityChallenger
 {
@@ -16,6 +18,7 @@ namespace GravityChallenger
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Input touchStateCollection;
 
         MenuBase menu;
 
@@ -52,6 +55,9 @@ namespace GravityChallenger
 
             // Initialize the Menu
             this.menu = new MenuMain();
+
+            // Initialize the touch collection manager
+            this.touchStateCollection = new Input();
         }
 
         /// <summary>
@@ -87,8 +93,15 @@ namespace GravityChallenger
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 Exit();
 
+
             // Update the menu
             this.menu.Update();
+
+            // Update touch panel state
+            this.touchStateCollection.Update();
+            this.touchStateCollection.IsPressed();
+            this.touchStateCollection.GetPosition();
+            
 
             base.Update(gameTime);
                         

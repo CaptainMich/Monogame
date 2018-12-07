@@ -38,7 +38,7 @@ namespace GravityChallenger.GameEngine
         // METHODS
 
         // UPDATE & DRAW
-        public virtual void Update()
+        public virtual void Update(Input input)
         {
             this.sprite.Update(this.hitbox.X / Settings.PIXEL_RATIO, this.hitbox.Y / Settings.PIXEL_RATIO);
         }

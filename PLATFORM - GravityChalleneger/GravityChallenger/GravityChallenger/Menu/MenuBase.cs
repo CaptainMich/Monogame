@@ -13,6 +13,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 // my project import 
 using GravityChallenger.GraphicsEngine;
+using GravityChallenger.GameEngine;
 
 namespace GravityChallenger.Menu
 {
@@ -20,11 +21,13 @@ namespace GravityChallenger.Menu
     {
         // FIELDS
         private Sprite background;
+        private Ground ground;
 
         // CONSTRUCTOR 
         protected MenuBase()
         {
             this.background = new Sprite("background_3", 0, 0);
+            this.ground = new Ground();
         }
 
         // METHODS
@@ -38,6 +41,7 @@ namespace GravityChallenger.Menu
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             this.background.Draw(spriteBatch);
+            this.ground.Draw(spriteBatch);
         }
     }
 }

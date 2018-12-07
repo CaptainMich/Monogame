@@ -10,9 +10,19 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+// my project import 
+using GravityChallenger.GraphicsEngine;
+
 namespace GravityChallenger.GameEngine
 {
-    class Ground
+    public class Ground : GameObject
     {
+        // FIELDS
+
+        // CONSTRUCTOR 
+        public Ground()
+            : base(200, 200, new Sprite("ground_1"))
+        {
+        }
     }
 }

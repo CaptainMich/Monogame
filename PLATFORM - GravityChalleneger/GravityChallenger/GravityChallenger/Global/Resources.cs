@@ -36,6 +36,7 @@ namespace GravityChallenger.Global
                 "gameover",
                 "getready",
                 "ground",
+                "ground_1",
                 "logo",
                 "medals",
                 "menu_buttons",

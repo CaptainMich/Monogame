@@ -56,3 +56,5 @@ C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\Gr
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\android\assets\System.Xml.Linq.pdb
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\android\assets\System.Xml.pdb
 C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\GravityChallenger.csprojAssemblyReference.cache
+C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\bin\Android\AnyCPU\Debug\GravityChallenger.dll
+C:\Users\insan\Desktop\Computers-Graphics\GravityChallenger\GravityChallenger\GravityChallenger\GravityChallenger\obj\Debug\60\linksrc\GravityChallenger.dll.mdb
