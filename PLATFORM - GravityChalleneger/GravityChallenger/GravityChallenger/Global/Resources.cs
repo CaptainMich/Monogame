@@ -36,7 +36,6 @@ namespace GravityChallenger.Global
                 "logo",
                 "medals",
                 "menu_buttons",
-                "menu_buttons_1",
                 "new",
                 "numbers_large",
                 "numbers_small",

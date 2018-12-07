@@ -22,12 +22,13 @@ namespace GravityChallenger.GameEngine
     {
         // FIELDS
         private bool isPressed;
+        private bool hover;
 
         // PROPERTIES
 
         // CONSTRUCTORS
         public MyButton(int x, int y, int index)
-            : base(x, y, new AnimatedSprite("menu_buttons_1", 700, 200, index, SheetOrientation.VERTICAL, 50, 50))
+            : base(x, y, new AnimatedSprite("menu_buttons", 312, 106, index, SheetOrientation.VERTICAL, 0, 0))
         {
             this.isPressed = false;
         }
@@ -38,15 +39,23 @@ namespace GravityChallenger.GameEngine
             if (this.hitbox.Contains(input.GetPosition()))
             {
                 this.isPressed = true;
-                Console.WriteLine("Button Pressed");
-                // Resources.Sounds["button_click"].Play();
+                //Resources.Sounds["button_clic"].Play();                
+
+                if (input.IsPressed())
+                    this.sprite.SetColor(Color.Gray);
+                else
+                {
+                    this.sprite.SetColor(Color.LightGray);
+                    //if (this.hover == false)
+                        //Resources.Sounds["button_hover"].Play();
+                }
+                this.hover = true;
             }
-
-
-            if (input.IsPressed())
-                this.sprite.SetColor(Color.Gray);
             else
+            {
                 this.sprite.SetColor(Color.White);
+                this.hover = false;
+            }
 
 
             base.Update(game, input);

@@ -50,9 +50,9 @@ namespace GravityChallenger.GraphicsEngine
                                                        this.spriteHeight * Settings.PIXEL_RATIO);
 
             if (this.orientation == SheetOrientation.HORIZONTAL)
-                this.sourceRectangle = new Rectangle(index * spriteWidth, 0, spriteWidth, spriteHeight);
+                this.sourceRectangle = new Rectangle(this.currentIndex * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight);
             else
-                this.sourceRectangle = new Rectangle(0, index * spriteHeight, spriteWidth, spriteHeight);
+                this.sourceRectangle = new Rectangle(0, this.currentIndex * this.spriteHeight, this.spriteWidth, this.spriteHeight);
         }
 
         // UPDATE & DRAW
@@ -60,8 +60,8 @@ namespace GravityChallenger.GraphicsEngine
         {
             this.destinationRectangle.X = (x + (int)this.origin.X) * Settings.PIXEL_RATIO;
             this.destinationRectangle.Y = (y + (int)this.origin.Y) * Settings.PIXEL_RATIO;
-            this.destinationRectangle.Width = this.texture.Width * Settings.PIXEL_RATIO;
-            this.destinationRectangle.Height = this.texture.Height * Settings.PIXEL_RATIO;
+            this.destinationRectangle.Width = this.spriteWidth * Settings.PIXEL_RATIO;
+            this.destinationRectangle.Height = this.spriteHeight * Settings.PIXEL_RATIO;
 
             if (this.orientation == SheetOrientation.HORIZONTAL)
             {
