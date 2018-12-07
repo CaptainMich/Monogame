@@ -28,7 +28,7 @@ namespace GravityChallenger.GameEngine
 
         // CONSTRUCTORS
         public MyButton(int x, int y, int index)
-            : base(x, y, new AnimatedSprite("menu_buttons", 312, 106, index, SheetOrientation.VERTICAL, 0, 0))
+            : base(x, y, new AnimatedSprite("menu_buttons", 312, 110, index, SheetOrientation.VERTICAL, 0, 0))
         {
             this.isPressed = false;
         }

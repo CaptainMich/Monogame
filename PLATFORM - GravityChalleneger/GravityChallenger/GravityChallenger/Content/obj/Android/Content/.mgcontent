@@ -4,21 +4,21 @@
   <Platform>Android</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/background.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/bird.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/game_button.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/gameover.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/getready.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/ground.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/logo.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/medals.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/menu_buttons.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/new.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/numbers_large.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/numbers_small.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_bot.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_top.png</File>
-    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/score_box.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/background.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/bird.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/game_button.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/gameover.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/getready.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/ground.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/logo.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/medals.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/menu_buttons.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/new.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/numbers_large.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/numbers_small.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_bot.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_top.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/score_box.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
