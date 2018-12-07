@@ -23,10 +23,12 @@ namespace GravityChallenger.GameEngine
     public abstract class GameObject
     {
         // FIELDS
-        private Rectangle hitbox;
-        private Sprite sprite;
+        protected Rectangle hitbox;
+        protected Sprite sprite;
 
-        // CONSTRUCTION
+        // PROPERTIES
+
+        // CONSTRUCTORS
         protected GameObject(int x, int y, Sprite sprite)
         {
             Point textureSize = sprite.GetTextureSize();
@@ -35,10 +37,8 @@ namespace GravityChallenger.GameEngine
             this.sprite.Update(x, y);
         }
 
-        // METHODS
-
         // UPDATE & DRAW
-        public virtual void Update(Input input)
+        public virtual void Update(GameTime gameTime, Input input)
         {
             this.sprite.Update(this.hitbox.X / Settings.PIXEL_RATIO, this.hitbox.Y / Settings.PIXEL_RATIO);
         }
@@ -47,5 +47,7 @@ namespace GravityChallenger.GameEngine
         {
             this.sprite.Draw(spriteBatch);
         }
+
+        // METHODS
     }
 }

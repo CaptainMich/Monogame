@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 
@@ -19,7 +20,9 @@ namespace GravityChallenger.Global
         // FIELDS 
         private TouchCollection inputTouch;
 
-        // CONSTRUCTOR
+        // PROPERTIES
+
+        // CONSTRUCTORS
         public Input()
         {
         }
@@ -69,7 +72,7 @@ namespace GravityChallenger.Global
         }
 
 
-        public void GetPosition()
+        public Vector2 GetPosition()
         {
             if (inputTouch.Count > 0)
             {
@@ -79,8 +82,11 @@ namespace GravityChallenger.Global
                 {
                     Console.WriteLine(inputTouch[0].Position);
                 }
+
+                return inputTouch[0].Position;
             }
 
+            return new Vector2(0, 0);
         }
     }
 }

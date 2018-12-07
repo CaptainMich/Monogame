@@ -10,30 +10,32 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 // my project import 
 using GravityChallenger.GraphicsEngine;
 using GravityChallenger.GameEngine;
+using GravityChallenger.Global;
 
 namespace GravityChallenger.Menu
 {
     public abstract class MenuBase 
     {
         // FIELDS
-        private Sprite background;
-        private Ground ground;
+        protected Sprite background;
+        protected Ground ground;
 
         // CONSTRUCTOR 
         protected MenuBase()
         {
-            this.background = new Sprite("background_3", 0, 0);
+            this.background = new Sprite("background", 0, 0);
             this.ground = new Ground();
         }
 
         // METHODS
 
         // UPDATE and DRAW
-        public virtual void Update()
+        public virtual void Update(GameTime gameTime, Input input, Game1 game)
         {
 
         }

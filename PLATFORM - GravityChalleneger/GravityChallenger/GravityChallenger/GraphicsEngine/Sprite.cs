@@ -27,11 +27,7 @@ namespace GravityChallenger.GraphicsEngine
         protected Vector2 origin;
         protected SpriteEffects imgOrientation;
 
-        // GETTERS & SETTERS
-        public Point GetTextureSize()
-        {
-            return new Point(this.destinationRectangle.Width, this.destinationRectangle.Height);
-        }
+        // PROPERTIES
 
         public void SetColor(Color color)
         {
@@ -54,7 +50,7 @@ namespace GravityChallenger.GraphicsEngine
             this.origin.Y = y;
         }
 
-        // CONSTRUCTOR
+        // CONSTRUCTORS
         public Sprite(string imgKey)
         {
             this.Initialize(imgKey, 0, 0, SpriteEffects.None);
@@ -83,8 +79,6 @@ namespace GravityChallenger.GraphicsEngine
                 this.texture.Height * Settings.PIXEL_RATIO);
         }
 
-        // METHODS
-
         // UPDATE & DRAW
         public virtual void Update(int x, int y)
         {
@@ -105,5 +99,13 @@ namespace GravityChallenger.GraphicsEngine
                 this.imgOrientation, 
                 0f);
         }
+
+        // METHODS
+
+        public Point GetTextureSize()
+        {
+            return new Point(this.destinationRectangle.Width, this.destinationRectangle.Height);
+        }
+
     }
 }

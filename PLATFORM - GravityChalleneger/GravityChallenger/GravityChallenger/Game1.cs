@@ -95,7 +95,7 @@ namespace GravityChallenger
 
 
             // Update the menu
-            this.menu.Update();
+            this.menu.Update(gameTime, touchStateCollection, this);
 
             // Update touch panel state
             this.touchStateCollection.Update();

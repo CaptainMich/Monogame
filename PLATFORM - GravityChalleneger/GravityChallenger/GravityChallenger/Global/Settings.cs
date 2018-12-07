@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace GravityChallenger.Global
 {
@@ -17,8 +18,8 @@ namespace GravityChallenger.Global
     {
         public static int PIXEL_RATIO = 1;
 
-        // public static int SCREEN_WIDTH = 800 * PIXEL_RATIO;
-        // public static int SCREEN_HEIGHT = 480 * PIXEL_RATIO;
+         public static int SCREEN_HEIGHT = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+         public static int SCREEN_WIDTH = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
 
         public static bool IS_FULLSCREEN = false;
 

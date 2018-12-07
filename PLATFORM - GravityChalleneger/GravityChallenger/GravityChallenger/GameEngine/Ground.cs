@@ -19,10 +19,16 @@ namespace GravityChallenger.GameEngine
     {
         // FIELDS
 
-        // CONSTRUCTOR 
+        // PROPERTIES 
+
+        // CONSTRUCTORS 
         public Ground()
-            : base(200, 200, new Sprite("ground_1"))
+            : base(0, 1000, new Sprite("ground"))
         {
         }
+
+        // UPDATE & DRAW
+
+        // METHODS
     }
 }
