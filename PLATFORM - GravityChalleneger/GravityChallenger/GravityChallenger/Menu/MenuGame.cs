@@ -29,13 +29,28 @@ namespace GravityChallenger.Menu
         private bool start;
         private int timer;
         private Random random;
+        protected Ground ground;
 
         // CONSTRUCTOR
         public MenuGame()
             : base()
         {
-            this.background = new Sprite("background_sky", 0, 0);
-            this.ground = new Ground(0, 1000);
+            switch (Settings.gameMode)
+            {
+                case GameMODE.SKY:
+                    this.background = new Sprite("background_sky", 0, 0);
+                    this.ground = new Ground(0, 1000, new Sprite("ground_sky"));
+                    Console.WriteLine("HERE 1");
+                    break;
+                case GameMODE.SEA:                    
+                    this.background = new Sprite("background_sea", 0, 0);
+                    this.ground = new Ground(0, 1000, new Sprite("ground_sea"));
+                    Console.WriteLine("HERE 2");
+                    break;
+                default:
+                    break;
+            }
+            
             this.pipes = new List<Pipe>();
             this.start = false;
             this.timer = 0;
@@ -53,7 +68,8 @@ namespace GravityChallenger.Menu
             foreach (Pipe pipe in new List<Pipe>(this.pipes))
             {
                 pipe.Update(gameTime, input);
-           
+                if (pipe.ToDelete())
+                    this.pipes.Remove(pipe);
             }
 
             if (!this.start)

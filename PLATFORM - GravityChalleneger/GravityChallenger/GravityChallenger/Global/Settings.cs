@@ -14,6 +14,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace GravityChallenger.Global
 {
+    public enum GameMODE
+    {
+        SKY,
+        SEA,
+        JUNGLE
+    }
+
     public class Settings
     {
         public static int PIXEL_RATIO = 1;
@@ -24,5 +31,8 @@ namespace GravityChallenger.Global
         public static bool IS_FULLSCREEN = false;
 
         public static Color BACKGROUND_COLOR = Color.CornflowerBlue;
+
+        public static GameMODE gameMode = GameMODE.SKY;
+
     }
 }

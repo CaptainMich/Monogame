@@ -16,6 +16,7 @@ using Microsoft.Xna.Framework;
 
 namespace GravityChallenger.Global
 {
+
     public class Resources
     {
         public static Dictionary<string, Texture2D> Images ;
@@ -34,7 +35,8 @@ namespace GravityChallenger.Global
                 "game_buttons",
                 "gameover",
                 "getready",
-                "ground",
+                "ground_sky",
+                "ground_sea",
                 "logo",
                 "logo_original",
                 "medals",
@@ -43,8 +45,8 @@ namespace GravityChallenger.Global
                 "new",
                 "numbers_large",
                 "numbers_small",
-                "pipe_bot",
-                "pipe_top",
+                "pipe_bot_sky",
+                "pipe_top_sky",
                 "score_box",
             };
 

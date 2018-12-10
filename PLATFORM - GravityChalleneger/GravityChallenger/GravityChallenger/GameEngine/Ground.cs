@@ -27,8 +27,8 @@ namespace GravityChallenger.GameEngine
         // PROPERTIES 
 
         // CONSTRUCTORS 
-        public Ground(int x, int y)
-            : base(x, y, new Sprite("ground"))
+        public Ground(int x, int y, Sprite sprite)
+            : base(x, y, sprite)
         {
             this.baseX = x;
             this.currentOffset = 0;

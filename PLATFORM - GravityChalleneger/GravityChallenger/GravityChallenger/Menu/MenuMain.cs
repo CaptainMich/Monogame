@@ -20,6 +20,7 @@ using GravityChallenger.Global;
 
 namespace GravityChallenger.Menu
 {
+
     public class MenuMain : MenuBase
     {
         // FIELDS
@@ -29,11 +30,11 @@ namespace GravityChallenger.Menu
         private MyButton scoreButton;
         private MyButton settingsButton;
 
+
         // CONSTRUCTOR
         public MenuMain() 
             : base()
-        {
-            this.background = new Sprite("background_sea", 0, 0);
+        {            
             this.logo = new Sprite("logo", (Settings.SCREEN_WIDTH) / 12, 50);
             this.startButton = new MyButton((Settings.SCREEN_WIDTH)/12, 720, 4);
             this.scoreButton = new MyButton((Settings.SCREEN_WIDTH) / 2, 715, 1);
@@ -53,6 +54,11 @@ namespace GravityChallenger.Menu
 
             if (this.startButton.IsPressed())
                 game.ChangeMenu(MenuState.GAME);
+            if (this.settingsButton.IsPressed())
+            {
+                Settings.gameMode = GameMODE.SEA;
+                Console.WriteLine("GameMODE: {0}", Settings.gameMode);
+            }
             if (this.quitButton.IsPressed())
                 game.Exit();
 
@@ -62,7 +68,6 @@ namespace GravityChallenger.Menu
         public override void Draw(SpriteBatch spriteBatch)
         {
             base.Draw(spriteBatch);
-            this.background.Draw(spriteBatch);
             this.logo.Draw(spriteBatch);
             this.startButton.Draw(spriteBatch);
             this.scoreButton.Draw(spriteBatch);

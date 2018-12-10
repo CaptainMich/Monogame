@@ -23,11 +23,11 @@ namespace GravityChallenger.Menu
     {
         // FIELDS
         protected Sprite background;
-        protected Ground ground;
 
         // CONSTRUCTOR 
         protected MenuBase()
-        {            
+        {
+            this.background = new Sprite("background_sea", 0, 0);
         }
 
         // METHODS
@@ -38,7 +38,8 @@ namespace GravityChallenger.Menu
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
-        {            
+        {
+            this.background.Draw(spriteBatch);
         }
     }
 }

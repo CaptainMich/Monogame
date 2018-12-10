@@ -97,7 +97,7 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/getready.png
 
-#begin Graphics/ground.png
+#begin Graphics/ground_sea.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -107,7 +107,19 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Graphics/ground.png
+/build:Graphics/ground_sea.png
+
+#begin Graphics/ground_sky.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/ground_sky.png
 
 #begin Graphics/logo.png
 /importer:TextureImporter
@@ -205,7 +217,7 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/numbers_small.png
 
-#begin Graphics/pipe_bot.png
+#begin Graphics/pipe_bot_sky.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -215,9 +227,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Graphics/pipe_bot.png
+/build:Graphics/pipe_bot_sky.png
 
-#begin Graphics/pipe_top.png
+#begin Graphics/pipe_top_sky.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -227,7 +239,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Graphics/pipe_top.png
+/build:Graphics/pipe_top_sky.png
 
 #begin Graphics/score_box.png
 /importer:TextureImporter
