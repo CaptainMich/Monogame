@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/background_sky.png</SourceFile>
-  <SourceTime>2018-12-05T09:23:18+01:00</SourceTime>
-  <DestFile>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/bin/Android/Content/Graphics/background_sky.xnb</DestFile>
-  <DestTime>2018-12-10T19:08:44.1825145+01:00</DestTime>
+  <SourceFile>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/background_sky.png</SourceFile>
+  <SourceTime>2018-12-10T21:18:32.9184653+01:00</SourceTime>
+  <DestFile>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/bin/Android/Content/Graphics/background_sky.xnb</DestFile>
+  <DestTime>2018-12-10T21:22:07.367804+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

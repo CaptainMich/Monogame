@@ -44,10 +44,10 @@ namespace GravityChallenger.GraphicsEngine
             this.currentIndex = index;
             this.orientation = orientation;
 
-            this.destinationRectangle = new Rectangle((x + (int)this.origin.X) * Settings.PIXEL_RATIO,
-                                                      (y + (int)this.origin.Y) * Settings.PIXEL_RATIO,
-                                                       this.spriteWidth * Settings.PIXEL_RATIO,
-                                                       this.spriteHeight * Settings.PIXEL_RATIO);
+            this.destinationRectangle = new Rectangle((int)((x + (int)this.origin.X) * Settings.PIXEL_RATIO),
+                                                      (int)((y + (int)this.origin.Y) * Settings.PIXEL_RATIO),
+                                                      (int)(this.spriteWidth * Settings.PIXEL_RATIO),
+                                                       (int)(this.spriteHeight * Settings.PIXEL_RATIO));
 
             if (this.orientation == SheetOrientation.HORIZONTAL)
                 this.sourceRectangle = new Rectangle(this.currentIndex * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight);
@@ -58,10 +58,10 @@ namespace GravityChallenger.GraphicsEngine
         // UPDATE & DRAW
         public override void Update(int x, int y)
         {
-            this.destinationRectangle.X = (x + (int)this.origin.X) * Settings.PIXEL_RATIO;
-            this.destinationRectangle.Y = (y + (int)this.origin.Y) * Settings.PIXEL_RATIO;
-            this.destinationRectangle.Width = this.spriteWidth * Settings.PIXEL_RATIO;
-            this.destinationRectangle.Height = this.spriteHeight * Settings.PIXEL_RATIO;
+            this.destinationRectangle.X = (int)((x + (int)this.origin.X) * Settings.PIXEL_RATIO);
+            this.destinationRectangle.Y = (int)((y + (int)this.origin.Y) * Settings.PIXEL_RATIO);
+            this.destinationRectangle.Width = (int)(this.spriteWidth * Settings.PIXEL_RATIO);
+            this.destinationRectangle.Height = (int)(this.spriteHeight * Settings.PIXEL_RATIO);
 
             if (this.orientation == SheetOrientation.HORIZONTAL)
             {

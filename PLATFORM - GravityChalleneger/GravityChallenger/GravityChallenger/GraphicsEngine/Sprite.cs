@@ -73,19 +73,19 @@ namespace GravityChallenger.GraphicsEngine
             this.rotation = 0f;
             this.imgOrientation = orientation;
             this.origin = new Vector2(0, 0);
-            this.destinationRectangle = new Rectangle((x + (int)this.origin.X) * Settings.PIXEL_RATIO,
-                (y + (int)this.origin.Y) * Settings.PIXEL_RATIO,
-                this.texture.Width * Settings.PIXEL_RATIO,
-                this.texture.Height * Settings.PIXEL_RATIO);
+            this.destinationRectangle = new Rectangle((int)((x + (int)this.origin.X) * Settings.PIXEL_RATIO),
+                (int)((y + (int)this.origin.Y) * Settings.PIXEL_RATIO),
+                (int)(this.texture.Width * Settings.PIXEL_RATIO),
+                (int)(this.texture.Height * Settings.PIXEL_RATIO));
         }
 
         // UPDATE & DRAW
         public virtual void Update(int x, int y)
         {
-            this.destinationRectangle.X = (x + (int)this.origin.X) * Settings.PIXEL_RATIO;
-            this.destinationRectangle.Y = (y + (int)this.origin.Y) * Settings.PIXEL_RATIO;
-            this.destinationRectangle.Width = this.texture.Width * Settings.PIXEL_RATIO;
-            this.destinationRectangle.Height = this.texture.Height * Settings.PIXEL_RATIO;
+            this.destinationRectangle.X = (int)((x + (int)this.origin.X) * Settings.PIXEL_RATIO);
+            this.destinationRectangle.Y = (int)((y + (int)this.origin.Y) * Settings.PIXEL_RATIO);
+            this.destinationRectangle.Width = (int)(this.texture.Width * Settings.PIXEL_RATIO);
+            this.destinationRectangle.Height = (int)(this.texture.Height * Settings.PIXEL_RATIO);
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)

@@ -50,7 +50,7 @@ namespace GravityChallenger.GameEngine
                 if (this.currentOffset >= 30)
                     this.currentOffset = 0;
 
-                this.hitbox.X = this.baseX - (this.currentOffset * Settings.PIXEL_RATIO);
+                this.hitbox.X = this.baseX - (int)((this.currentOffset * Settings.PIXEL_RATIO));
             }
         }
 
