@@ -35,11 +35,11 @@ namespace GravityChallenger.Menu
         public MenuMain() 
             : base()
         {            
-            this.logo = new Sprite("logo", 80, 50);
-            this.startButton = new MyButton((int)((Settings.SCREEN_WIDTH) * Settings.PIXEL_RATIO) /30, 920, 4);
-            this.scoreButton = new MyButton((int)((Settings.SCREEN_WIDTH) * Settings.PIXEL_RATIO) / 4, 920, 1);
-            this.settingsButton = new MyButton((int)((Settings.SCREEN_WIDTH) * Settings.PIXEL_RATIO) / 30, 1050, 5);
-            this.quitButton = new MyButton((int)((Settings.SCREEN_WIDTH) * Settings.PIXEL_RATIO) /4, 1050, 2);
+            this.logo = new Sprite("logo", 60, 50);
+            this.startButton = new MyButton(38 , 920, 4);
+            this.scoreButton = new MyButton(370, 920, 1);
+            this.settingsButton = new MyButton(38, 1050, 5);
+            this.quitButton = new MyButton(370, 1050, 2);
         }
 
         // METHODS

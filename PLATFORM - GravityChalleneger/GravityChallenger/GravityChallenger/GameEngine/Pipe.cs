@@ -84,7 +84,7 @@ namespace GravityChallenger.GameEngine
             switch(Settings.gameMode)
             {
                 case GameMODE.SEA:
-                    return (type == PipeType.TOP ? new Sprite("pipe_top_sky") : new Sprite("pipe_bot_sky"));
+                    return (type == PipeType.TOP ? new Sprite("pipe_top_sea") : new Sprite("pipe_bot_sea"));
                 default:
                     return (type == PipeType.TOP ? new Sprite("pipe_top_sky") : new Sprite("pipe_bot_sky"));
             }            
@@ -100,9 +100,9 @@ namespace GravityChallenger.GameEngine
             while (this.timer >= 7)
             {
                 this.timer -= 7;
-                this.hitbox.X -= (int)Settings.PIXEL_RATIO;
+                this.hitbox.X -= (int)Math.Ceiling(Settings.PIXEL_RATIO);
 
-                if (this.hitbox.X <= -135 * Settings.PIXEL_RATIO)
+                if (this.hitbox.X <= -135 * (int)Settings.PIXEL_RATIO)
                     this.toDelete = true;
             }
         }

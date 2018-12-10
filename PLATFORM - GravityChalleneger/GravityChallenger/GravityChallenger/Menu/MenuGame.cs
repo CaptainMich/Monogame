@@ -86,11 +86,25 @@ namespace GravityChallenger.Menu
                 {
                     this.timer = 0;
 
-                    int topPipeY = this.random.Next(-400, -100);
-                    int botPipeY = topPipeY + 1000;
+                    switch (Settings.gameMode)
+                    {
+                        case GameMODE.SKY:
+                            int topPipeSkyY = this.random.Next(-400, -100);
+                            int botPipeSkyY = topPipeSkyY + 1000;
+                            this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, topPipeSkyY, PipeType.TOP));
+                            this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, botPipeSkyY, PipeType.BOT));
+                            break;
 
-                    this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, topPipeY, PipeType.TOP));
-                    this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, botPipeY, PipeType.BOT));
+                        case GameMODE.SEA:
+                            int topPipeSeaY = this.random.Next(0, 200);
+                            int botPipeSeaY = topPipeSeaY + 700;
+                            this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, topPipeSeaY, PipeType.TOP));
+                            this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, botPipeSeaY, PipeType.BOT));
+                            break;
+                        default:
+                            break;
+                    }
+
                 }
             }
         }

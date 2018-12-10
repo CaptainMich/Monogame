@@ -21,11 +21,15 @@
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/new.png</File>
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/numbers_large.png</File>
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/numbers_small.png</File>
+    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_bot_sea.png</File>
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_bot_sky.png</File>
+    <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_top_sea.png</File>
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_top_sky.png</File>
     <File>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/score_box.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

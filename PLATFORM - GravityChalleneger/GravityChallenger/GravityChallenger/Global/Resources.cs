@@ -47,6 +47,8 @@ namespace GravityChallenger.Global
                 "numbers_small",
                 "pipe_bot_sky",
                 "pipe_top_sky",
+                "pipe_bot_sea",
+                "pipe_top_sea",
                 "score_box",
             };
 
