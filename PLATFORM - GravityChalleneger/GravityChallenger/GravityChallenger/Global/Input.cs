@@ -56,6 +56,7 @@ namespace GravityChallenger.Global
                 if (!touch.TryGetPreviousLocation(out prevLoc) || prevLoc.State != TouchLocationState.Moved)
                     return false;
 
+
                 // get your delta
                 var delta = touch.Position - prevLoc.Position;
 
@@ -68,7 +69,7 @@ namespace GravityChallenger.Global
                 
             }
 
-            return true;
+            return false;
         }
 
 
@@ -80,7 +81,7 @@ namespace GravityChallenger.Global
                 // if (inputTouch[0].State == TouchLocationState.Moved || inputTouch[0].State == TouchLocationState.Pressed)
                 if (inputTouch[0].State == TouchLocationState.Pressed)
                 {
-                    Console.WriteLine(inputTouch[0].Position);
+                    Console.WriteLine("\n{0}\n", inputTouch[0].Position);
                 }
 
                 return inputTouch[0].Position;

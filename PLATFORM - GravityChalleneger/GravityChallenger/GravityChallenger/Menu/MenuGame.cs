@@ -22,10 +22,9 @@ namespace GravityChallenger.Menu
 {
     public class MenuGame : MenuBase
     {
-        private const int HOLE_HEIGHT = 50;
-
         // FIELDS
         private List<Pipe> pipes;
+        private Bird player;
         private bool start;
         private int timer;
         private Random random;
@@ -40,14 +39,18 @@ namespace GravityChallenger.Menu
                 case GameMODE.SKY:
                     this.background = new Sprite("background_sky", 0, 0);
                     this.ground = new Ground(0, 1000, new Sprite("ground_sky"));
-                    Console.WriteLine("HERE 1");
+                    this.player = new Bird((int)(150 * Settings.PIXEL_RATIO), (int)(600 * Settings.PIXEL_RATIO),
+                                    new AnimatedSprite("bird", 101, 80, 1, SheetOrientation.HORIZONTAL, 20, 20));
                     break;
                 case GameMODE.SEA:                    
                     this.background = new Sprite("background_sea", 0, 0);
                     this.ground = new Ground(0, 1000, new Sprite("ground_sea"));
-                    Console.WriteLine("HERE 2");
                     break;
                 default:
+                    this.background = new Sprite("background_sky", 0, 0);
+                    this.ground = new Ground(0, 1000, new Sprite("ground_sky"));
+                    this.player = new Bird((int)(150 * Settings.PIXEL_RATIO), (int)(600 * Settings.PIXEL_RATIO),
+                                    new AnimatedSprite("bird", 101, 80, 1, SheetOrientation.HORIZONTAL, 20, 20));
                     break;
             }
             
@@ -62,6 +65,7 @@ namespace GravityChallenger.Menu
         {
             base.Update(gameTime, input, game);
 
+            this.player.Update(gameTime, input);
             this.ground.Update(gameTime, input);
             this.timer += gameTime.ElapsedGameTime.Milliseconds;
 
@@ -70,7 +74,7 @@ namespace GravityChallenger.Menu
                 pipe.Update(gameTime, input);
                 if (pipe.ToDelete())
                     this.pipes.Remove(pipe);
-            }
+            }            
 
             if (!this.start)
             {               
@@ -101,7 +105,12 @@ namespace GravityChallenger.Menu
                             this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, topPipeSeaY, PipeType.TOP));
                             this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, botPipeSeaY, PipeType.BOT));
                             break;
+
                         default:
+                            int topPipeY = this.random.Next(-400, -100);
+                            int botPipeY = topPipeY + 1000;
+                            this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, topPipeY, PipeType.TOP));
+                            this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, botPipeY, PipeType.BOT));
                             break;
                     }
 
@@ -115,6 +124,7 @@ namespace GravityChallenger.Menu
             foreach (Pipe pipe in this.pipes)
                 pipe.Draw(spriteBatch);
             this.ground.Draw(spriteBatch);
+            this.player.Draw(spriteBatch);
 
         }
     }

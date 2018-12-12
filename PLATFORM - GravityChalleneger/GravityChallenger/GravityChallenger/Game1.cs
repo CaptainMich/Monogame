@@ -15,6 +15,7 @@ namespace GravityChallenger
     {
         MAIN,
         GAME,
+        SETTINGS,
         GAMEOVER
     }
     /// <summary>
@@ -33,9 +34,8 @@ namespace GravityChallenger
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.IsFullScreen = true;
-
             /*// Width = 800; Height = 480 is the default value
+            graphics.IsFullScreen = true;
             graphics.PreferredBackBufferWidth = Settings.SCREEN_WIDTH;
             graphics.PreferredBackBufferHeight = Settings.SCREEN_HEIGHT;
             graphics.IsFullScreen = false;
@@ -47,6 +47,8 @@ namespace GravityChallenger
             graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
             graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
             graphics.ApplyChanges();
+
+            this.IsFixedTimeStep = true;
         }
 
         /// <summary>
@@ -104,6 +106,10 @@ namespace GravityChallenger
                 case MenuState.GAME:
                     this.menu = new MenuGame();
                     Console.WriteLine("\nSTATE: Menu Game\n");
+                    break;
+                case MenuState.SETTINGS:
+                    this.menu = new MenuSettings();
+                    Console.WriteLine("\nSTATE: Menu Settings\n");
                     break;
                 default:
                     break;

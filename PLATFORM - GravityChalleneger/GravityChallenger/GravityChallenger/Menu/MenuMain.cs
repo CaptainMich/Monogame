@@ -36,10 +36,14 @@ namespace GravityChallenger.Menu
             : base()
         {            
             this.logo = new Sprite("logo", 60, 50);
-            this.startButton = new MyButton(38 , 920, 4);
-            this.scoreButton = new MyButton(370, 920, 1);
-            this.settingsButton = new MyButton(38, 1050, 5);
-            this.quitButton = new MyButton(370, 1050, 2);
+            this.startButton = new MyButton(38 , 920, 
+                new AnimatedSprite("menu_buttons", 312, 110, 4, SheetOrientation.VERTICAL, 0, 0));
+            this.scoreButton = new MyButton(370, 920, 
+                new AnimatedSprite("menu_buttons", 312, 110, 1, SheetOrientation.VERTICAL, 0, 0));
+            this.settingsButton = new MyButton(38, 1050, 
+                new AnimatedSprite("menu_buttons", 312, 110, 5, SheetOrientation.VERTICAL, 0, 0));
+            this.quitButton = new MyButton(370, 1050,
+                new AnimatedSprite("menu_buttons", 312, 110, 2, SheetOrientation.VERTICAL, 0, 0));
         }
 
         // METHODS
@@ -55,10 +59,7 @@ namespace GravityChallenger.Menu
             if (this.startButton.IsPressed())
                 game.ChangeMenu(MenuState.GAME);
             if (this.settingsButton.IsPressed())
-            {
-                Settings.gameMode = GameMODE.SEA;
-                Console.WriteLine("GameMODE: {0}", Settings.gameMode);
-            }
+                game.ChangeMenu(MenuState.SETTINGS);
             if (this.quitButton.IsPressed())
                 game.Exit();
 
