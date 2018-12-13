@@ -13,6 +13,30 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Graphics/alien.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/alien.png
+
+#begin Graphics/background_jungle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/background_jungle.png
+
 #begin Graphics/background_sea.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -37,6 +61,18 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/background_sky.png
 
+#begin Graphics/background_space.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/background_space.png
+
 #begin Graphics/bird.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -49,7 +85,7 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/bird.png
 
-#begin Graphics/game_button.png
+#begin Graphics/bug.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -59,7 +95,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Graphics/game_button.png
+/build:Graphics/bug.png
 
 #begin Graphics/game_buttons.png
 /importer:TextureImporter
@@ -97,6 +133,18 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/getready.png
 
+#begin Graphics/ground_jungle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/ground_jungle.png
+
 #begin Graphics/ground_sea.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -120,6 +168,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Graphics/ground_sky.png
+
+#begin Graphics/ground_space.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/ground_space.png
 
 #begin Graphics/logo.png
 /importer:TextureImporter
@@ -169,18 +229,6 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/menu_buttons.png
 
-#begin Graphics/menu_buttons_2.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Graphics/menu_buttons_2.png
-
 #begin Graphics/new.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -217,6 +265,18 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/numbers_small.png
 
+#begin Graphics/pipe_bot_jungle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/pipe_bot_jungle.png
+
 #begin Graphics/pipe_bot_sea.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -240,6 +300,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Graphics/pipe_bot_sky.png
+
+#begin Graphics/pipe_top_jungle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Graphics/pipe_top_jungle.png
 
 #begin Graphics/pipe_top_sea.png
 /importer:TextureImporter

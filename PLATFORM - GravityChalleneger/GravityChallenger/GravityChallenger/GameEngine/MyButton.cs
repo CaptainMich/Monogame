@@ -50,6 +50,7 @@ namespace GravityChallenger.GameEngine
                     //if (this.hover == false)
                         //Resources.Sounds["button_hover"].Play();
                 }
+
                 this.hover = true;
             }
             else

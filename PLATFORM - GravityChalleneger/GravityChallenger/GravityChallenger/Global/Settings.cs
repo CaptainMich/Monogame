@@ -18,7 +18,9 @@ namespace GravityChallenger.Global
     {
         SKY,
         SEA,
-        JUNGLE
+        JUNGLE,
+        SPACE,
+        ICE
     }
 
     public class Settings

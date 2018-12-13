@@ -27,6 +27,15 @@ namespace GravityChallenger.GameEngine
         protected Sprite sprite;
 
         // PROPERTIES
+        public int X
+        {
+            get { return this.hitbox.X; }
+        }
+
+        public int Right
+        {
+            get { return this.hitbox.Right; }
+        }
 
         // CONSTRUCTORS
         protected GameObject(int x, int y, Sprite sprite)
@@ -49,5 +58,9 @@ namespace GravityChallenger.GameEngine
         }
 
         // METHODS
+        public bool CollisionWith(GameObject obj)
+        {
+            return this.hitbox.Intersects(obj.hitbox);
+        }
     }
 }
