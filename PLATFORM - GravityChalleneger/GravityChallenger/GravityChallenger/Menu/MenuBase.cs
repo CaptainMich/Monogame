@@ -27,7 +27,7 @@ namespace GravityChallenger.Menu
         // CONSTRUCTOR 
         protected MenuBase()
         {
-            this.background = new Sprite("background_sea", 0, 0);
+            this.background = new Sprite("background_sky", 0, 0);
         }
 
         // METHODS

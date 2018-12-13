@@ -56,6 +56,7 @@ namespace GravityChallenger.Global
                 "pipe_top_sea",
                 "pipe_top_sky",
                 "score_box",
+                "submarine"
             };
 
             /*foreach (string img in graphics)

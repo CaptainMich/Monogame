@@ -41,7 +41,7 @@ namespace GravityChallenger.GameEngine
         protected GameObject(int x, int y, Sprite sprite)
         {
             Point textureSize = sprite.GetTextureSize();
-            this.hitbox = new Rectangle((int)(x * Settings.PIXEL_RATIO), (int)(y * Settings.PIXEL_RATIO), textureSize.X, textureSize.Y);
+            this.hitbox = new Rectangle((int)(x * Settings.PIXEL_RATIO), (int)(y * Settings.PIXEL_RATIO), textureSize.X, textureSize.Y-30);
             this.sprite = sprite;
             this.sprite.Update(x, y);
         }

@@ -24,7 +24,7 @@ namespace GravityChallenger.GameEngine
     public class Bird : GameObject
     {
         // CONSTANT 
-        public const float FLAP = -10f;
+        public const float FLAP = -14f;
         public const float MAX_SPEED = 15f;
         private const float MAX_ROTATION_VELOCITY = 0.15f;
         private const float MAX_ROTATION = (float)Math.PI / 2f;
@@ -69,8 +69,8 @@ namespace GravityChallenger.GameEngine
                 {
                     this.gravity = true;
                     this.speedY = FLAP;
-                    this.rotation = -(float)Math.PI / 8f;
-                    this.rotationVelocity = -0.15f;
+                    this.rotation = 0;
+                    this.rotationVelocity = -0.0f;
                     //Resources.Sounds["flap"].Play();
                     //Resources.Sounds["flap2"].Play();
                 }
@@ -79,10 +79,10 @@ namespace GravityChallenger.GameEngine
             if (this.gravity)
             {
                 if (this.speedY < MAX_SPEED)
-                    this.speedY += 0.4f;
+                    this.speedY += 0.5f;
 
                 if (this.rotationVelocity < MAX_ROTATION_VELOCITY)
-                    this.rotationVelocity += 0.0005f;
+                    this.rotationVelocity += 0.000f;
 
                 if (this.rotation < MAX_ROTATION)
                 {

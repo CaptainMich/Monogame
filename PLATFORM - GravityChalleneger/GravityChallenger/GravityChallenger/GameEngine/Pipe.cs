@@ -106,7 +106,7 @@ namespace GravityChallenger.GameEngine
             while (this.timer >= 5)
             {
                 this.timer -= 5;
-                this.hitbox.X -= (int)(Settings.PIXEL_RATIO);
+                this.hitbox.X -= (int)Math.Ceiling(Settings.PIXEL_RATIO);
 
                 if (this.hitbox.X <= -155 * (int)Settings.PIXEL_RATIO)
                     this.toDelete = true;

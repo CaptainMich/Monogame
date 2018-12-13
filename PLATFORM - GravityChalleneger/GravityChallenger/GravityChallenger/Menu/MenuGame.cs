@@ -45,14 +45,14 @@ namespace GravityChallenger.Menu
                     this.background = new Sprite("background_sky", 0, 0);
                     this.ground = new Ground(0, 1100, new Sprite("ground_sky"));
                     this.player = new Bird((int)(150 * Settings.PIXEL_RATIO), (int)(600 * Settings.PIXEL_RATIO),
-                                    new AnimatedSprite("bird", 125, 100, 1, SheetOrientation.HORIZONTAL, 20, 20));
+                                    new AnimatedSprite("bird", 125, 70, 1, SheetOrientation.HORIZONTAL, 20, 20));
                     break;
 
                 case GameMODE.SEA:                    
                     this.background = new Sprite("background_sea", 0, 0);
                     this.ground = new Ground(0, 1100, new Sprite("ground_sea"));
                     this.player = new Bird((int)(150 * Settings.PIXEL_RATIO), (int)(600 * Settings.PIXEL_RATIO),
-                                    new AnimatedSprite("bird", 125, 100, 1, SheetOrientation.HORIZONTAL, 20, 20));
+                                    new AnimatedSprite("submarine", 125, 90, 1, SheetOrientation.HORIZONTAL, 20, 20));
                     break;
 
                 case GameMODE.JUNGLE:
@@ -66,13 +66,13 @@ namespace GravityChallenger.Menu
                     this.background = new Sprite("background_space", 0, 0);
                     this.ground = new Ground(0, 1100, new Sprite("ground_space"));
                     this.player = new Bird((int)(150 * Settings.PIXEL_RATIO), (int)(600 * Settings.PIXEL_RATIO),
-                                    new AnimatedSprite("alien", 125, 100, 1, SheetOrientation.HORIZONTAL, 20, 20));
+                                    new AnimatedSprite("alien", 125, 73, 1, SheetOrientation.HORIZONTAL, 20, 20));
                     break;
                 default:
                     this.background = new Sprite("background_sky", 0, 0);
                     this.ground = new Ground(0, 1100, new Sprite("ground_sky"));
                     this.player = new Bird((int)(150 * Settings.PIXEL_RATIO), (int)(600 * Settings.PIXEL_RATIO),
-                                    new AnimatedSprite("bird", 125, 110, 1, SheetOrientation.HORIZONTAL, 20, 20));
+                                    new AnimatedSprite("bird", 125, 70, 1, SheetOrientation.HORIZONTAL, 20, 20));
                     break;
             }
 
@@ -119,10 +119,11 @@ namespace GravityChallenger.Menu
 
                 if (!this.start)
                 {
-                    if (timer >= 3000)
+                    if (timer >= 1500)
                     {
                         this.start = true;
                         this.timer = 2000;
+                        this.player.ActiveGravity();
                     }
                 }
                 else
