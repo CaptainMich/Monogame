@@ -41,7 +41,7 @@ namespace GravityChallenger.Menu
             this.scoreButton = new MyButton(370, 920, 
                 new AnimatedSprite("menu_buttons", 312, 110, 1, SheetOrientation.VERTICAL, 0, 0));
             this.settingsButton = new MyButton(38, 1050, 
-                new AnimatedSprite("menu_buttons", 312, 110, 5, SheetOrientation.VERTICAL, 0, 0));
+                new AnimatedSprite("menu_buttons", 312, 110, 10, SheetOrientation.VERTICAL, 0, 0));
             this.quitButton = new MyButton(370, 1050,
                 new AnimatedSprite("menu_buttons", 312, 110, 2, SheetOrientation.VERTICAL, 0, 0));
         }
