@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/Graphics/menu_buttons.png</SourceFile>
-  <SourceTime>2018-12-14T17:00:48.1153782+01:00</SourceTime>
-  <DestFile>C:/Users/insan/Desktop/Computers-Graphics/GravityChallenger/GravityChallenger/GravityChallenger/GravityChallenger/Content/bin/Android/Content/Graphics/menu_buttons.xnb</DestFile>
-  <DestTime>2018-12-14T17:15:28.2284956+01:00</DestTime>
+  <SourceFile>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/menu_buttons.png</SourceFile>
+  <SourceTime>2018-12-14T20:23:48.3492175+01:00</SourceTime>
+  <DestFile>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/bin/Android/Content/Graphics/menu_buttons.xnb</DestFile>
+  <DestTime>2018-12-14T21:33:26.2015507+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

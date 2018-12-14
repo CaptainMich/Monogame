@@ -53,7 +53,7 @@ namespace GravityChallenger.GameEngine
 
             this.timer += gameTime.ElapsedGameTime.Milliseconds;
 
-            if (this.timer >= 180)
+            if (this.timer >= 120)
             {
                 this.timer = 0;
                 if (this.currentFrame == 3)
