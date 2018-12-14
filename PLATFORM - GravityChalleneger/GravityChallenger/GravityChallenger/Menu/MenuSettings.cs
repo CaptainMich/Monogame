@@ -28,8 +28,9 @@ namespace GravityChallenger.Menu
         private MyButton seaModeButton;
         private MyButton jungleModeButton;
         private MyButton spaceModeButton;
+        private MyButton iceButton;
         private MyButton menuButton;
-        private MyButton quitButton;
+
 
         // CONSTRUCTOR
         public MenuSettings()
@@ -43,10 +44,10 @@ namespace GravityChallenger.Menu
                 new AnimatedSprite("menu_buttons", 312, 110, 9, SheetOrientation.VERTICAL, 0, 0));
             this.spaceModeButton = new MyButton(370, 550,
                 new AnimatedSprite("menu_buttons", 312, 110, 7, SheetOrientation.VERTICAL, 0, 0));
-            this.menuButton = new MyButton(38, 680,
+            this.iceButton = new MyButton(38, 680,
                 new AnimatedSprite("menu_buttons", 312, 110, 0, SheetOrientation.VERTICAL, 0, 0));
-            this.quitButton = new MyButton(370, 680, 
-                new AnimatedSprite("menu_buttons", 312, 110, 2, SheetOrientation.VERTICAL, 0, 0));
+            this.menuButton = new MyButton(370, 680, 
+                new AnimatedSprite("menu_buttons", 312, 110, 0, SheetOrientation.VERTICAL, 0, 0));
         }
 
         // METHODS
@@ -58,8 +59,9 @@ namespace GravityChallenger.Menu
             this.seaModeButton.Update(gameTime, input);
             this.jungleModeButton.Update(gameTime, input);
             this.spaceModeButton.Update(gameTime, input);
+            this.iceButton.Update(gameTime, input);
             this.menuButton.Update(gameTime, input);
-            this.quitButton.Update(gameTime, input);
+            
 
             if (this.skyModeButton.IsPressed())
                 Settings.gameMode = GameMODE.SKY;
@@ -69,11 +71,10 @@ namespace GravityChallenger.Menu
                 Settings.gameMode = GameMODE.JUNGLE;
             if (this.spaceModeButton.IsPressed())
                 Settings.gameMode = GameMODE.SPACE;
-            if (this.quitButton.IsPressed())
-                game.Exit();
+            if (this.spaceModeButton.IsPressed())
+                Settings.gameMode = GameMODE.ICE;
             if (this.menuButton.IsPressed())
                 game.ChangeMenu(MenuState.MAIN);
-
 
             Console.WriteLine("{0}", Settings.gameMode);
 
@@ -87,8 +88,8 @@ namespace GravityChallenger.Menu
             this.seaModeButton.Draw(spriteBatch);
             this.jungleModeButton.Draw(spriteBatch);
             this.spaceModeButton.Draw(spriteBatch);
+            this.iceButton.Draw(spriteBatch);
             this.menuButton.Draw(spriteBatch);
-            this.quitButton.Draw(spriteBatch);
         }
     }
 }

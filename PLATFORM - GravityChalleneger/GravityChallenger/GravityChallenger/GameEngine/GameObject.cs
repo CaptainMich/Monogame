@@ -41,7 +41,8 @@ namespace GravityChallenger.GameEngine
         protected GameObject(int x, int y, Sprite sprite)
         {
             Point textureSize = sprite.GetTextureSize();
-            this.hitbox = new Rectangle((int)(x * Settings.PIXEL_RATIO), (int)(y * Settings.PIXEL_RATIO), textureSize.X, textureSize.Y-30);
+            this.hitbox = new Rectangle((int)(x * Settings.PIXEL_RATIO), (int)(y * Settings.PIXEL_RATIO), textureSize.X, 
+                textureSize.Y - (int)(15 * Settings.PIXEL_RATIO));
             this.sprite = sprite;
             this.sprite.Update(x, y);
         }
@@ -55,6 +56,8 @@ namespace GravityChallenger.GameEngine
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             this.sprite.Draw(spriteBatch);
+            // Debug the game 
+            // spriteBatch.Draw(Resources.Images["ground_sky"], this.hitbox, Color.Red);
         }
 
         // METHODS

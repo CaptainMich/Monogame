@@ -18,6 +18,7 @@ using GravityChallenger.GraphicsEngine;
 using GravityChallenger.GameEngine;
 using GravityChallenger.Global;
 
+
 namespace GravityChallenger.Menu
 {
     public class MenuGame : MenuBase
@@ -27,13 +28,25 @@ namespace GravityChallenger.Menu
         private List<Pipe> pipes;
         private Bird player;
         protected Ground ground;
-
         private bool start;        
         private int timer;
         private Random random;
 
         private bool gameover;
         private bool setRotation;
+        private Sprite gameOver;
+        private Sprite scoreBox;
+        private int scoreBoxX;
+        private int scoreBoxY;
+
+        private MyButton retryButton;
+        private MyButton menuButton;
+
+        private int score;
+        private int highscore;
+        private bool newHighscore;
+        private Sprite newScore;
+        private AnimatedSprite medal;
 
         // CONSTRUCTOR
         public MenuGame()
@@ -83,6 +96,23 @@ namespace GravityChallenger.Menu
             this.setRotation = false;
             this.timer = 0;
             this.random = new Random();
+            this.gameOver = new Sprite("gameover", (int)(80 * Settings.PIXEL_RATIO), 230);
+
+            scoreBoxX = 50 * (int)Settings.PIXEL_RATIO;
+            scoreBoxY = 400;
+            this.scoreBox = new Sprite("score_box", scoreBoxX, scoreBoxY);
+
+            this.retryButton = new MyButton(scoreBoxX +100 , scoreBoxY + 350,
+                new AnimatedSprite("game_buttons", 120, 120, 1, SheetOrientation.HORIZONTAL, 0, 0));
+            this.menuButton = new MyButton(scoreBoxX +350, scoreBoxY + 350,
+                new AnimatedSprite("game_buttons", 120, 120, 2, SheetOrientation.HORIZONTAL, 0, 0));
+
+            this.score = 0;
+            this.highscore = 0;
+            this.newHighscore = false;
+            this.medal = new AnimatedSprite("medals", 135, 156, 0, SheetOrientation.HORIZONTAL, scoreBoxX + 62, scoreBoxY + 105);
+            //this.newScore = new Sprite("new", scoreBoxX + 85 - 16 - 2, scoreBoxY + 29);
+
         }
 
         // UPDATE & DRAW 
@@ -112,7 +142,6 @@ namespace GravityChallenger.Menu
                 {
                     this.gameover = true;
                     this.GameOver(gameTime);
-                    game.ChangeMenu(MenuState.MAIN);
                 }
                 else
                     this.player.Update(gameTime, input);
@@ -188,17 +217,16 @@ namespace GravityChallenger.Menu
                 else
                 {
                     this.GameOver(gameTime);
-                    game.ChangeMenu(MenuState.MAIN);
                 }
             }
             else
             {
-                /*this.retryButton.Update(gameTime, input);
+                this.retryButton.Update(gameTime, input);
                 if (this.retryButton.IsPressed())
-                    game.ChangeMenu(Menu.GAME);
+                    game.ChangeMenu(MenuState.GAME);
                 this.menuButton.Update(gameTime, input);
                 if (this.menuButton.IsPressed())
-                    game.ChangeMenu(Menu.MAIN);*/
+                    game.ChangeMenu(MenuState.MAIN);
             }
         }
 
@@ -207,10 +235,43 @@ namespace GravityChallenger.Menu
             this.background.Draw(spriteBatch);            
             foreach (Pipe pipe in this.pipes)
                 pipe.Draw(spriteBatch);
-            if (!this.start)
+            if (!this.start && !this.setRotation)
                 this.getReady.Draw(spriteBatch);
+            else if (!this.setRotation)
+            {
+                int nb = 1;
+                if (score > 0)
+                    nb = ((int)Math.Floor(Math.Log10(score)) + 1);
+
+                // Number.Draw(spriteBatch, NumberSize.LARGE, (Settings.SCREEN_WIDTH - (nb * Number.LARGE_NUMBER_WIDTH)) / 2, 75, score);
+            }
+
             this.ground.Draw(spriteBatch);
             this.player.Draw(spriteBatch);
+
+            if (this.setRotation)
+            {
+                this.gameOver.Draw(spriteBatch);
+                this.scoreBox.Draw(spriteBatch);
+                this.medal.Draw(spriteBatch);
+                this.retryButton.Draw(spriteBatch);
+                this.menuButton.Draw(spriteBatch);
+
+                int nb = 0;
+                if (score > 0)
+                    nb = (int)Math.Floor(Math.Log10(score));
+
+                int nb2 = 0;
+                if (highscore > 0)
+                    nb2 = (int)Math.Floor(Math.Log10(highscore));
+
+                // Number.Draw(spriteBatch, NumberSize.LARGE, this.baseScoreX - (nb * Number.LARGE_NUMBER_WIDTH), this.baseScoreY, score);
+                // Number.Draw(spriteBatch, NumberSize.LARGE, this.baseScoreX - (nb2 * Number.LARGE_NUMBER_WIDTH), this.baseScoreY + 21, highscore);
+
+
+                if (this.newHighscore)
+                    this.newScore.Draw(spriteBatch);
+            }
         }
 
         // METHODS
@@ -221,27 +282,26 @@ namespace GravityChallenger.Menu
             this.setRotation = true;
             this.player.Update(gameTime, null);
 
-            /*int medalIndex = -1;
+            int medalIndex = 0;
 
-            if (score >= 40)
+            if (score >= 10)
                 medalIndex = 0;
-            else if (score >= 30)
-                medalIndex = 3;
             else if (score >= 20)
-                medalIndex = 2;
-            else if (score >= 10)
                 medalIndex = 1;
+            else if (score >= 30)
+                medalIndex = 2;
+
 
             this.medal.SetIndex(medalIndex);
 
-            this.highscore = HighScore.GetHighScore();
+            //this.highscore = HighScore.GetHighScore();
 
             if (this.score > this.highscore)
             {
                 this.newHighscore = true;
                 this.highscore = this.score;
-                HighScore.SetHighScore(this.score);
-            }*/
+                //HighScore.SetHighScore(this.score);
+            }
         }
 
 
