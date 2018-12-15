@@ -38,6 +38,8 @@ namespace GravityChallenger.Menu
         private Sprite scoreBox;
         private int scoreBoxX;
         private int scoreBoxY;
+        private int baseScoreX;
+        private int baseScoreY;
 
         private MyButton retryButton;
         private MyButton menuButton;
@@ -101,17 +103,19 @@ namespace GravityChallenger.Menu
             scoreBoxX = 50 * (int)Settings.PIXEL_RATIO;
             scoreBoxY = 400;
             this.scoreBox = new Sprite("score_box", scoreBoxX, scoreBoxY);
+            this.baseScoreX = scoreBoxX;
+            this.baseScoreY = scoreBoxY;
 
-            this.retryButton = new MyButton(scoreBoxX +100 , scoreBoxY + 350,
+            this.retryButton = new MyButton(scoreBoxX + 100 , scoreBoxY + 350,
                 new AnimatedSprite("game_buttons", 120, 120, 1, SheetOrientation.HORIZONTAL, 0, 0));
-            this.menuButton = new MyButton(scoreBoxX +350, scoreBoxY + 350,
+            this.menuButton = new MyButton(scoreBoxX + 350, scoreBoxY + 350,
                 new AnimatedSprite("game_buttons", 120, 120, 2, SheetOrientation.HORIZONTAL, 0, 0));
 
             this.score = 0;
             this.highscore = 0;
             this.newHighscore = false;
             this.medal = new AnimatedSprite("medals", 135, 156, 0, SheetOrientation.HORIZONTAL, scoreBoxX + 62, scoreBoxY + 105);
-            //this.newScore = new Sprite("new", scoreBoxX + 85 - 16 - 2, scoreBoxY + 29);
+            this.newScore = new Sprite("new", scoreBoxX + 230 , scoreBoxY + 180);
 
         }
 
@@ -135,6 +139,12 @@ namespace GravityChallenger.Menu
                         this.gameover = true;
                         //Resources.Sounds["pipe_hit"].Play();
                         break;
+                    }
+                    if (pipe.GetPipeType() == PipeType.TOP && !pipe.IsPassed() && this.player.X > pipe.Right)
+                    {
+                        pipe.SetPassed();
+                        this.score += 1;
+                        //Resources.Sounds["pipe_pass"].Play();
                     }
                 }
 
@@ -241,9 +251,9 @@ namespace GravityChallenger.Menu
             {
                 int nb = 1;
                 if (score > 0)
-                    nb = ((int)Math.Floor(Math.Log10(score)) + 1);
+                    nb = ((int)Math.Floor(Math.Log10(score) + 1));
 
-                // Number.Draw(spriteBatch, NumberSize.LARGE, (Settings.SCREEN_WIDTH - (nb * Number.LARGE_NUMBER_WIDTH)) / 2, 75, score);
+                Number.Draw(spriteBatch, NumberSize.LARGE, (int)(300 * Settings.PIXEL_RATIO), 200, score);
             }
 
             this.ground.Draw(spriteBatch);
@@ -265,8 +275,8 @@ namespace GravityChallenger.Menu
                 if (highscore > 0)
                     nb2 = (int)Math.Floor(Math.Log10(highscore));
 
-                // Number.Draw(spriteBatch, NumberSize.LARGE, this.baseScoreX - (nb * Number.LARGE_NUMBER_WIDTH), this.baseScoreY, score);
-                // Number.Draw(spriteBatch, NumberSize.LARGE, this.baseScoreX - (nb2 * Number.LARGE_NUMBER_WIDTH), this.baseScoreY + 21, highscore);
+                Number.Draw(spriteBatch, NumberSize.LARGE, this.baseScoreX + (int)(460 * Settings.PIXEL_RATIO), this.baseScoreY + 90, score);
+                Number.Draw(spriteBatch, NumberSize.LARGE, this.baseScoreX + (int)(460 * Settings.PIXEL_RATIO), this.baseScoreY + 190, highscore);
 
 
                 if (this.newHighscore)
@@ -282,7 +292,7 @@ namespace GravityChallenger.Menu
             this.setRotation = true;
             this.player.Update(gameTime, null);
 
-            int medalIndex = 0;
+            int medalIndex = -1;
 
             if (score >= 10)
                 medalIndex = 0;
@@ -294,13 +304,13 @@ namespace GravityChallenger.Menu
 
             this.medal.SetIndex(medalIndex);
 
-            //this.highscore = HighScore.GetHighScore();
+            this.highscore = HighScore.GetHighScore();
 
             if (this.score > this.highscore)
             {
                 this.newHighscore = true;
                 this.highscore = this.score;
-                //HighScore.SetHighScore(this.score);
+                HighScore.SetHighScore(this.score);
             }
         }
 

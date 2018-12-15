@@ -67,7 +67,9 @@
     <Compile Include="GameEngine\GameObject.cs" />
     <Compile Include="GameEngine\Ground.cs" />
     <Compile Include="GameEngine\Pipe.cs" />
+    <Compile Include="Global\HighScore.cs" />
     <Compile Include="Global\Input.cs" />
+    <Compile Include="Global\Number.cs" />
     <Compile Include="Global\Resources.cs" />
     <Compile Include="Global\Settings.cs" />
     <Compile Include="GraphicsEngine\AnimatedSprite.cs" />
