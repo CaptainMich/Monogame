@@ -25,8 +25,9 @@ namespace GravityChallenger.Global
 
     public class Settings
     {
+
         public static double PIXEL_RATIO = (Double)GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height / 1280;
-        //PIXEL_RATIO = 1;
+        //public static double  PIXEL_RATIO = 1;
 
 
         public static int SCREEN_HEIGHT = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;

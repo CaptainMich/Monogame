@@ -24,7 +24,7 @@ namespace GravityChallenger.GameEngine
     public class Bird : GameObject
     {
         // CONSTANT 
-        public const float FLAP = -14f;
+        public float FLAP = -12f * (float)(Settings.PIXEL_RATIO);
         public const float MAX_SPEED = 15f;
         private const float MAX_ROTATION_VELOCITY = 0.15f;
         private const float MAX_ROTATION = (float)Math.PI / 2f;
@@ -79,7 +79,7 @@ namespace GravityChallenger.GameEngine
             if (this.gravity)
             {
                 if (this.speedY < MAX_SPEED)
-                    this.speedY += 0.5f;
+                    this.speedY += 0.5f * (float)(Settings.PIXEL_RATIO);
 
                 if (this.rotationVelocity < MAX_ROTATION_VELOCITY)
                     this.rotationVelocity += 0.000f;

@@ -28,7 +28,6 @@ namespace GravityChallenger.Menu
         private MyButton seaModeButton;
         private MyButton jungleModeButton;
         private MyButton spaceModeButton;
-        private MyButton iceModeButton;
         private MyButton menuButton;
 
 
@@ -44,10 +43,8 @@ namespace GravityChallenger.Menu
                 new AnimatedSprite("menu_buttons", 312, 110, 9, SheetOrientation.VERTICAL, 0, 0));
             this.spaceModeButton = new MyButton(370, 550,
                 new AnimatedSprite("menu_buttons", 312, 110, 7, SheetOrientation.VERTICAL, 0, 0));
-            this.iceModeButton = new MyButton(38, 680,
-                new AnimatedSprite("menu_buttons", 312, 110, 0, SheetOrientation.VERTICAL, 0, 0));
-            this.menuButton = new MyButton(370, 680, 
-                new AnimatedSprite("menu_buttons", 312, 110, 0, SheetOrientation.VERTICAL, 0, 0));
+            this.menuButton = new MyButton( 300, 900,
+                 new AnimatedSprite("game_buttons", 120, 120, 2, SheetOrientation.HORIZONTAL, 0, 0));
         }
 
         // METHODS
@@ -59,7 +56,6 @@ namespace GravityChallenger.Menu
             this.seaModeButton.Update(gameTime, input);
             this.jungleModeButton.Update(gameTime, input);
             this.spaceModeButton.Update(gameTime, input);
-            this.iceModeButton.Update(gameTime, input);
             this.menuButton.Update(gameTime, input);
 
 
@@ -83,11 +79,6 @@ namespace GravityChallenger.Menu
                 Settings.gameMode = GameMODE.SPACE;
                 game.ChangeMenu(MenuState.MAIN);
             }
-            if (this.iceModeButton.IsPressed())
-            {
-                Settings.gameMode = GameMODE.ICE;
-                game.ChangeMenu(MenuState.MAIN);
-            }
             if (this.menuButton.IsPressed())
                 game.ChangeMenu(MenuState.MAIN);
 
@@ -103,7 +94,6 @@ namespace GravityChallenger.Menu
             this.seaModeButton.Draw(spriteBatch);
             this.jungleModeButton.Draw(spriteBatch);
             this.spaceModeButton.Draw(spriteBatch);
-            this.iceModeButton.Draw(spriteBatch);
             this.menuButton.Draw(spriteBatch);
         }
     }

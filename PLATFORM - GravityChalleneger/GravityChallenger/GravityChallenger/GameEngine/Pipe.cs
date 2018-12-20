@@ -103,9 +103,9 @@ namespace GravityChallenger.GameEngine
 
             this.timer += gameTime.ElapsedGameTime.Milliseconds;
 
-            while (this.timer >= 5)
+            while (this.timer >= (int)(5 * Settings.PIXEL_RATIO))
             {
-                this.timer -= 5;
+                this.timer -= (int)(5 * Settings.PIXEL_RATIO);
                 this.hitbox.X -= (int)Math.Ceiling(Settings.PIXEL_RATIO);
 
                 if (this.hitbox.X <= -155 * (int)Settings.PIXEL_RATIO)

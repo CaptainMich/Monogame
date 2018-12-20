@@ -91,14 +91,14 @@ namespace GravityChallenger.Menu
                     break;
             }
 
-            this.getReady = new Sprite("getready", (int)(80 * Settings.PIXEL_RATIO ), 230);
+            this.getReady = new Sprite("getready", (int)(80 * (int)Settings.PIXEL_RATIO ), 230);
             this.pipes = new List<Pipe>();
             this.start = false;
             this.gameover = false;
             this.setRotation = false;
             this.timer = 0;
             this.random = new Random();
-            this.gameOver = new Sprite("gameover", (int)(80 * Settings.PIXEL_RATIO), 230);
+            this.gameOver = new Sprite("gameover", (int)(80 * (int)Settings.PIXEL_RATIO), 230);
 
             scoreBoxX = 50 * (int)Settings.PIXEL_RATIO;
             scoreBoxY = 400;
@@ -215,7 +215,6 @@ namespace GravityChallenger.Menu
                                 this.pipes.Add(new Pipe(Settings.SCREEN_WIDTH, botPipeY, PipeType.BOT));
                                 break;
                         }
-
                     }
                 }
             }
@@ -275,8 +274,8 @@ namespace GravityChallenger.Menu
                 if (highscore > 0)
                     nb2 = (int)Math.Floor(Math.Log10(highscore));
 
-                Number.Draw(spriteBatch, NumberSize.SMALL, this.baseScoreX + (int)(460 * Settings.PIXEL_RATIO), this.baseScoreY + 100, score);
-                Number.Draw(spriteBatch, NumberSize.SMALL, this.baseScoreX + (int)(460 * Settings.PIXEL_RATIO), this.baseScoreY + 210, highscore);
+                Number.Draw(spriteBatch, NumberSize.SMALL, this.baseScoreX + (int)(460 * (int)Settings.PIXEL_RATIO), this.baseScoreY + 100, score);
+                Number.Draw(spriteBatch, NumberSize.SMALL, this.baseScoreX + (int)(460 * (int)Settings.PIXEL_RATIO), this.baseScoreY + 210, highscore);
 
 
                 if (this.newHighscore)
@@ -313,7 +312,5 @@ namespace GravityChallenger.Menu
                 HighScore.SetHighScore(this.score);
             }
         }
-
-
     }
 }
