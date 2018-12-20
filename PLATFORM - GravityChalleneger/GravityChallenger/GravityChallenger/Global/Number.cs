@@ -26,8 +26,8 @@ namespace GravityChallenger.Global
         public static int SMALL_NUMBER_WIDTH = 40;
         public static int SMALL_NUMBER_HEIGHT = 50;
 
-        public static int LARGE_NUMBER_WIDTH = 50;
-        public static int LARGE_NUMBER_HEIGHT = 90;
+        public static int LARGE_NUMBER_WIDTH = 70;
+        public static int LARGE_NUMBER_HEIGHT = 80;
 
         // STATIC METHODS
         public static void Draw(SpriteBatch spriteBatch, NumberSize size, int x, int y, int num)

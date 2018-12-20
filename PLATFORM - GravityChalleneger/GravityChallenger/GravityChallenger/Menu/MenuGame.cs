@@ -275,8 +275,8 @@ namespace GravityChallenger.Menu
                 if (highscore > 0)
                     nb2 = (int)Math.Floor(Math.Log10(highscore));
 
-                Number.Draw(spriteBatch, NumberSize.LARGE, this.baseScoreX + (int)(460 * Settings.PIXEL_RATIO), this.baseScoreY + 90, score);
-                Number.Draw(spriteBatch, NumberSize.LARGE, this.baseScoreX + (int)(460 * Settings.PIXEL_RATIO), this.baseScoreY + 190, highscore);
+                Number.Draw(spriteBatch, NumberSize.SMALL, this.baseScoreX + (int)(460 * Settings.PIXEL_RATIO), this.baseScoreY + 100, score);
+                Number.Draw(spriteBatch, NumberSize.SMALL, this.baseScoreX + (int)(460 * Settings.PIXEL_RATIO), this.baseScoreY + 210, highscore);
 
 
                 if (this.newHighscore)
