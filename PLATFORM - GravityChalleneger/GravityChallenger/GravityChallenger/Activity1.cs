@@ -5,7 +5,7 @@ using Android.Views;
 
 namespace GravityChallenger
 {
-    [Activity(Label = "GravityChallenger"
+    [Activity(Label = "Gravity X"
         , MainLauncher = true
         , Icon = "@drawable/icon"
         , Theme = "@style/Theme.Splash"

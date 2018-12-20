@@ -79,7 +79,7 @@ namespace GravityChallenger
 
             // Load Image and Sounds
             Resources.LoadImages(this.Content, this.GraphicsDevice);
-            //Resources.LoadSounds(this.Content, this.graphics);
+            //Resources.LoadSounds(this.Content, this.GraphicsDevice);
         }
 
         /// <summary>

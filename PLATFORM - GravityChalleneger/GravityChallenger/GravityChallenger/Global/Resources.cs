@@ -71,7 +71,7 @@ namespace GravityChallenger.Global
                 Images.Add(img, content.Load<Texture2D>("Graphics/" + img));
         }
 
-        public static void LoadSounds(ContentManager content)
+        public static void LoadSounds(ContentManager content, GraphicsDevice graphicsDevice)
         {
             Sounds = new Dictionary<string, SoundEffect>();
 
@@ -86,9 +86,8 @@ namespace GravityChallenger.Global
                 "pipe_pass"
             };
 
-            // foreach (string s in sounds)
-                // Images.Add(s, content.Load<Texture2D>("Sounds/" + s));
+             foreach (string s in sounds)
+                 Sounds.Add(s, content.Load<SoundEffect>("Sounds/" + s));
         }
-
     }
 }

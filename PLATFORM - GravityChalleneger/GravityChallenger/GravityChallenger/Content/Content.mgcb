@@ -361,3 +361,45 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/submarine.png
 
+#begin Sounds/button_clic.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/button_clic.wav
+
+#begin Sounds/button_hover.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/button_hover.wav
+
+#begin Sounds/flap.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/flap.wav
+
+#begin Sounds/flap2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/flap2.wav
+
+#begin Sounds/pipe_hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/pipe_hit.wav
+
+#begin Sounds/pipe_hit2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/pipe_hit2.wav
+
+#begin Sounds/pipe_pass.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/pipe_pass.wav
+

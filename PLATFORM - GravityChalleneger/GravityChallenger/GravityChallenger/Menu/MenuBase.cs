@@ -27,13 +27,36 @@ namespace GravityChallenger.Menu
         // CONSTRUCTOR 
         protected MenuBase()
         {
-            this.background = new Sprite("background_sky", 0, 0);
+            switch (Settings.gameMode)
+            {
+                case GameMODE.SKY:
+                    this.background = new Sprite("background_sky", 0, 0);
+                    break;
+
+                case GameMODE.SEA:
+                    this.background = new Sprite("background_sea", 0, 0);
+                    break;
+
+                case GameMODE.JUNGLE:
+                    this.background = new Sprite("background_jungle", 0, 0);
+                    break;
+
+                case GameMODE.SPACE:
+                    this.background = new Sprite("background_space", 0, 0);
+                    break;
+
+                default:
+                    this.background = new Sprite("background_sky", 0, 0);
+                    break;
+            }
         }
 
-        // METHODS
 
-        // UPDATE and DRAW
-        public virtual void Update(GameTime gameTime, Input input, Game1 game)
+
+    // METHODS
+
+    // UPDATE and DRAW
+    public virtual void Update(GameTime gameTime, Input input, Game1 game)
         {
         }
 

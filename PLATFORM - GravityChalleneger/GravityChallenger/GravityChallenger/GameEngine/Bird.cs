@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Media;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -36,6 +37,8 @@ namespace GravityChallenger.GameEngine
         private int timer;
         private float rotationVelocity;
         private float rotation;
+
+        
 
         // CONSTRUCTORS
         public Bird(int x, int y, AnimatedSprite sprite)
@@ -73,6 +76,8 @@ namespace GravityChallenger.GameEngine
                     this.rotationVelocity = -0.0f;
                     //Resources.Sounds["flap"].Play();
                     //Resources.Sounds["flap2"].Play();
+                    
+
                 }
             }
 

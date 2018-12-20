@@ -36,13 +36,13 @@ namespace GravityChallenger.Menu
             : base()
         {            
             this.logo = new Sprite("logo", 60, 50);
-            this.startButton = new MyButton(38 , 920, 
+            this.startButton = new MyButton(38 , 970, 
                 new AnimatedSprite("menu_buttons", 312, 110, 4, SheetOrientation.VERTICAL, 0, 0));
-            this.scoreButton = new MyButton(370, 920, 
+            this.scoreButton = new MyButton(370, 970, 
                 new AnimatedSprite("menu_buttons", 312, 110, 1, SheetOrientation.VERTICAL, 0, 0));
-            this.settingsButton = new MyButton(38, 1050, 
+            this.settingsButton = new MyButton(38, 1100, 
                 new AnimatedSprite("menu_buttons", 312, 110, 10, SheetOrientation.VERTICAL, 0, 0));
-            this.quitButton = new MyButton(370, 1050,
+            this.quitButton = new MyButton(370, 1100,
                 new AnimatedSprite("menu_buttons", 312, 110, 2, SheetOrientation.VERTICAL, 0, 0));
         }
 

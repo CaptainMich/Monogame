@@ -35,15 +35,15 @@ namespace GravityChallenger.Menu
         public MenuSettings()
             : base()
         {
-            this.skyModeButton = new MyButton(38, 420, 
+            this.skyModeButton = new MyButton(38, 220, 
                 new AnimatedSprite("menu_buttons", 312, 110, 8, SheetOrientation.VERTICAL, 0, 0));
-            this.seaModeButton = new MyButton(370, 420, 
+            this.seaModeButton = new MyButton(370, 220, 
                 new AnimatedSprite("menu_buttons", 312, 110, 6, SheetOrientation.VERTICAL, 0, 0));
-            this.jungleModeButton = new MyButton(38, 550, 
+            this.jungleModeButton = new MyButton(38, 350, 
                 new AnimatedSprite("menu_buttons", 312, 110, 9, SheetOrientation.VERTICAL, 0, 0));
-            this.spaceModeButton = new MyButton(370, 550,
+            this.spaceModeButton = new MyButton(370, 350,
                 new AnimatedSprite("menu_buttons", 312, 110, 7, SheetOrientation.VERTICAL, 0, 0));
-            this.menuButton = new MyButton( 300, 900,
+            this.menuButton = new MyButton( 300, 600,
                  new AnimatedSprite("game_buttons", 120, 120, 2, SheetOrientation.HORIZONTAL, 0, 0));
         }
 

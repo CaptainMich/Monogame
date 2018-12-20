@@ -33,8 +33,22 @@
     <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/pipe_top_sky.png</File>
     <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/score_box.png</File>
     <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/submarine.png</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Sounds/button_clic.wav</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Sounds/button_hover.wav</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Sounds/flap.wav</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Sounds/flap2.wav</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Sounds/pipe_hit.wav</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Sounds/pipe_hit2.wav</File>
+    <File>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Sounds/pipe_pass.wav</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
