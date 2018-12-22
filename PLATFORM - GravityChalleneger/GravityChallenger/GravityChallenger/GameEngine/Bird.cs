@@ -74,8 +74,9 @@ namespace GravityChallenger.GameEngine
                     this.speedY = FLAP;
                     this.rotation = 0;
                     this.rotationVelocity = -0.0f;
-                    //Resources.Sounds["flap"].Play();
-                    //Resources.Sounds["flap2"].Play();
+                    Resources.Sounds["flap"].Play();
+                    Resources.Sounds["flap2"].Play();
+
                     
 
                 }

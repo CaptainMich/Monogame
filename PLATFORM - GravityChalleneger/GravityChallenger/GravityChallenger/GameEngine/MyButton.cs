@@ -40,15 +40,15 @@ namespace GravityChallenger.GameEngine
             {
                 this.isPressed = true;
                 Console.WriteLine("\nButton is pressed\n");
-                //Resources.Sounds["button_clic"].Play();                
+                Resources.Sounds["button_click"].Play();                
 
                 if (input.IsPressed())
                     this.sprite.SetColor(Color.Gray);
                 else
                 {
                     this.sprite.SetColor(Color.LightGray);
-                    //if (this.hover == false)
-                        //Resources.Sounds["button_hover"].Play();
+                    if (this.hover == false)
+                        Resources.Sounds["button_hover"].Play();
                 }
 
                 this.hover = true;

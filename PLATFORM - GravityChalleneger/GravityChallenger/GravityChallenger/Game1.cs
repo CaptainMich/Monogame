@@ -8,6 +8,8 @@ using GravityChallenger.Global;
 using GravityChallenger.Menu;
 using Microsoft.Xna.Framework.Input.Touch;
 using System;
+using Android.Media;
+using Microsoft.Xna.Framework.Media;
 
 namespace GravityChallenger
 {
@@ -28,6 +30,8 @@ namespace GravityChallenger
         Input touchStateCollection;
 
         MenuBase menu;
+
+        public object ContentManager { get; private set; }
 
         public Game1()
         {
@@ -79,7 +83,7 @@ namespace GravityChallenger
 
             // Load Image and Sounds
             Resources.LoadImages(this.Content, this.GraphicsDevice);
-            //Resources.LoadSounds(this.Content, this.GraphicsDevice);
+            Resources.LoadSounds(this.Content, this.GraphicsDevice);
         }
 
         /// <summary>

@@ -361,11 +361,11 @@
 /processorParam:TextureFormat=Color
 /build:Graphics/submarine.png
 
-#begin Sounds/button_clic.wav
+#begin Sounds/button_click.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:Sounds/button_clic.wav
+/build:Sounds/button_click.wav
 
 #begin Sounds/button_hover.wav
 /importer:WavImporter

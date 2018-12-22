@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="GravityChallenger.GravityChallenger" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
-  <uses-sdk android:targetSdkVersion="23" android:minSdkVersion="11" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="GravityChallenger.GravityChallenger" android:versionCode="1" android:versionName="1.0" android:installLocation="internalOnly">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="11" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <application android:label="GravityChallenger" android:icon="@drawable/splash" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:icon="@drawable/icon" android:label="GravityChallenger" android:launchMode="singleInstance" android:screenOrientation="fullUser" android:theme="@style/Theme.Splash" android:name="md520e637e86f217a2150d4ad94ef39ef11.Activity1">
+    <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:icon="@drawable/icon" android:label="Gravity X" android:launchMode="singleInstance" android:screenOrientation="fullUser" android:theme="@style/Theme.Splash" android:name="md520e637e86f217a2150d4ad94ef39ef11.Activity1">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

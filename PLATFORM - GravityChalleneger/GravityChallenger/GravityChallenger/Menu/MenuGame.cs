@@ -137,14 +137,14 @@ namespace GravityChallenger.Menu
                     if (this.player.CollisionWith(pipe))
                     {
                         this.gameover = true;
-                        //Resources.Sounds["pipe_hit"].Play();
+                        Resources.Sounds["pipe_hit"].Play();
                         break;
                     }
                     if (pipe.GetPipeType() == PipeType.TOP && !pipe.IsPassed() && this.player.X > pipe.Right)
                     {
                         pipe.SetPassed();
                         this.score += 1;
-                        //Resources.Sounds["pipe_pass"].Play();
+                        Resources.Sounds["pipe_pass"].Play();
                     }
                 }
 
