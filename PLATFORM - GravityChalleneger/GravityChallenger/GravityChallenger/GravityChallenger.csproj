@@ -80,6 +80,7 @@
     <Compile Include="Menu\MenuBase.cs" />
     <Compile Include="Menu\MenuGame.cs" />
     <Compile Include="Menu\MenuMain.cs" />
+    <Compile Include="Menu\MenuScore.cs" />
     <Compile Include="Menu\MenuSettings.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

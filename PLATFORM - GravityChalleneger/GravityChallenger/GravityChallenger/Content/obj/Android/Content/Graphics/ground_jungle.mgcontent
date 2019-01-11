@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/insan/Desktop/GravityChallenger/GravityChallenger/Content/Graphics/ground_jungle.png</SourceFile>
-  <SourceTime>2018-12-13T18:13:28.7649598+01:00</SourceTime>
-  <DestFile>C:/Users/insan/Desktop/GravityChallenger/GravityChallenger/Content/bin/Android/Content/Graphics/ground_jungle.xnb</DestFile>
-  <DestTime>2018-12-22T10:18:55.9750075+01:00</DestTime>
+  <SourceFile>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/Graphics/ground_jungle.png</SourceFile>
+  <SourceTime>2019-01-11T18:28:21.6820191+01:00</SourceTime>
+  <DestFile>C:/Git/Monogame/PLATFORM - GravityChalleneger/GravityChallenger/GravityChallenger/Content/bin/Android/Content/Graphics/ground_jungle.xnb</DestFile>
+  <DestTime>2019-01-11T18:40:51.2639228+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

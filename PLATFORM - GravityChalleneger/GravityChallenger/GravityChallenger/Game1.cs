@@ -18,6 +18,7 @@ namespace GravityChallenger
         MAIN,
         GAME,
         SETTINGS,
+        SCORE,
         GAMEOVER
     }
     /// <summary>
@@ -114,6 +115,10 @@ namespace GravityChallenger
                 case MenuState.SETTINGS:
                     this.menu = new MenuSettings();
                     Console.WriteLine("\nSTATE: Menu Settings\n");
+                    break;
+                case MenuState.SCORE:
+                    this.menu = new MenuScore();
+                    Console.WriteLine("\nSTATE: Menu Score\n");
                     break;
                 default:
                     break;

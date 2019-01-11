@@ -60,6 +60,8 @@ namespace GravityChallenger.Menu
                 game.ChangeMenu(MenuState.GAME);
             if (this.settingsButton.IsPressed())
                 game.ChangeMenu(MenuState.SETTINGS);
+            if (this.scoreButton.IsPressed())
+                game.ChangeMenu(MenuState.SCORE);
             if (this.quitButton.IsPressed())
                 game.Exit();
 
