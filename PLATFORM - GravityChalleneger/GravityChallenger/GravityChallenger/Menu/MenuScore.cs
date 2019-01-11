@@ -59,6 +59,9 @@ namespace GravityChallenger.Menu
             base.Draw(spriteBatch);
             this.logo.Draw(spriteBatch);
             this.menuButton.Draw(spriteBatch);
+
+            Number.Draw(spriteBatch, NumberSize.LARGE, (int)(300 * (int)Settings.PIXEL_RATIO), 400, highscore);
+
         }
     }
 }

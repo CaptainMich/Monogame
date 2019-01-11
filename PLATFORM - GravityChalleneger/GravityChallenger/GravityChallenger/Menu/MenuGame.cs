@@ -266,14 +266,6 @@ namespace GravityChallenger.Menu
                 this.retryButton.Draw(spriteBatch);
                 this.menuButton.Draw(spriteBatch);
 
-                int nb = 0;
-                if (score > 0)
-                    nb = (int)Math.Floor(Math.Log10(score));
-
-                int nb2 = 0;
-                if (highscore > 0)
-                    nb2 = (int)Math.Floor(Math.Log10(highscore));
-
                 Number.Draw(spriteBatch, NumberSize.SMALL, this.baseScoreX + (int)(460 * (int)Settings.PIXEL_RATIO), this.baseScoreY + 100, score);
                 Number.Draw(spriteBatch, NumberSize.SMALL, this.baseScoreX + (int)(460 * (int)Settings.PIXEL_RATIO), this.baseScoreY + 210, highscore);
 
